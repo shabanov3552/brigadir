@@ -114,7 +114,7 @@ DynamicAdapt.prototype.indexInParent = function (parent, element) {
 // по возрастанию для this.type = min
 // по убыванию для this.type = max
 DynamicAdapt.prototype.arraySort = function (arr) {
-	if (this.type === "min") {
+	if (this.type === "max") {
 		Array.prototype.sort.call(arr, function (a, b) {
 			if (a.breakpoint === b.breakpoint) {
 				if (a.place === b.place) {

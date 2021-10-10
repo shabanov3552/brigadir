@@ -94,15 +94,15 @@ svg path {
 }
 
 *::-webkit-scrollbar {
-	height: 4px;
-	width: 4px;
+	height: 0px;
+	width: 0px;
 }
 *::-webkit-scrollbar-track {
 	background: transparent;
 }
 *::-webkit-scrollbar-thumb {
 	background-color: #828282;
-	border-radius: 6px;
+	border-radius: 0px;
 	border: 0px solid transparent;
 }
 // #endregion

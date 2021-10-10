@@ -1,4 +1,5 @@
 <header class="header">
+	<div class="menu__body"></div>
 	<div class="header__wrapper">
 		<a href="index.html" class="header__logo">
 			<svg class="header__logo-svg">
@@ -7,37 +8,39 @@
 			<span class="header__logo-text">спецодежда</span>
 		</a>
 		<div class="header__menu">
-			<ul class="menu__list">
-				<li class="menu__item"><a href="about.html" class="menu__link">О компании</a></li>
-				<li class="menu__item">
-					<a href="works.html" class="menu__link">
-						<svg class="menu__green-star">
-							<use xlink:href="img/svg/sprite.svg#green_star"></use>
+			<nav data-da=".menu-mobile,1000,2" class="menu__body">
+				<ul class="menu__list">
+					<li class="menu__item"><a href="about.html" class="menu__link">О компании</a></li>
+					<li class="menu__item">
+						<a href="works.html" class="menu__link">
+							<svg class="menu__green-star">
+								<use xlink:href="img/svg/sprite.svg#green_star"></use>
+							</svg>
+							<span>Наши работы</span>
+						</a>
+					</li>
+					<li class="menu__item menu__item_dropdown">
+						<span class="menu__link">Покупателям</span>
+						<svg class="menu__link-arrow">
+							<use xlink:href="img/svg/sprite.svg#arrow_dropdown"></use>
 						</svg>
-						<span>Наши работы</span>
-					</a>
-				</li>
-				<li class="menu__item menu__item_dropdown">
-					<span class="menu__link">Покупателям</span>
-					<svg class="menu__link-arrow">
-						<use xlink:href="img/svg/sprite.svg#arrow_dropdown"></use>
-					</svg>
-					<ul class="menu__dropdown">
-						<li class="menu__item"><a href="delivery.html" class="menu__link">Доставка и оплата</a></li>
-						<li class="menu__item"><a href="services.html" class="menu__link">Услуги</a></li>
-						<li class="menu__item"><a href="faq.html" class="menu__link">FAQ</a></li>
-					</ul>
-				</li>
-				<li class="menu__item"><a href="articles.html" class="menu__link">Статьи</a></li>
-				<li class="menu__item"><a href="contacts.html" class="menu__link">Контакты</a></li>
-			</ul>
+						<ul class="menu__dropdown">
+							<li data-da=".menu__list,1000,2" class="menu__item"><a href="delivery.html" class="menu__link">Доставка и оплата</a></li>
+							<li data-da=".menu__list,1000,3" class="menu__item"><a href="services.html" class="menu__link">Услуги</a></li>
+							<li data-da=".menu__list,1000,4" class="menu__item"><a href="faq.html" class="menu__link">FAQ</a></li>
+						</ul>
+					</li>
+					<li class="menu__item"><a href="articles.html" class="menu__link">Статьи</a></li>
+					<li class="menu__item"><a href="contacts.html" class="menu__link">Контакты</a></li>
+				</ul>
+			</nav>
 		</div>
 		<a href="tel:+78002019329" class="header__phone">
 			<svg class="header__phone-icon">
 				<use xlink:href="img/svg/sprite.svg#icon_phone_header"></use>
 			</svg>
 		</a>
-		<div class="header__col">
+		<div data-da=".menu-mobile,1000,1" class="header__col">
 			<a href="tel:+78002019329" class="header__tel">8 800 201 93 29</a>
 			<a href="#callback" class="header__pseudo-link _popup-link">Заказать звонок</a>
 			<div class="header__city">
@@ -85,27 +88,131 @@
 			</svg>
 		</a>
 	</div>
-	<div class="menu-lt">
+	<div data-da=".menu-mobile,1000,3" class="menu-lt">
 		<div class="menu-lt__body">
 			<div class="menu-lt__logo">
 				<img src="img/logo/catalog_logo.png" alt="">
 			</div>
-			<a href="" class="menu-lt__category">
-				<img src="img/svg/catalog_specodejda.svg" alt="" class="menu-lt__cat-logo">
-				<span class="menu-lt__text">Спецодежда</span>
-			</a>
-			<a href="" class="menu-lt__category">
-				<img src="img/svg/catalog_specobuv.svg" alt="" class="menu-lt__cat-logo">
-				<span class="menu-lt__text">Спецобувь</span>
-			</a>
-			<a href="" class="menu-lt__category">
-				<img src="img/svg/catalog_siz.svg" alt="" class="menu-lt__cat-logo">
-				<span class="menu-lt__text">СИЗ</span>
-			</a>
-			<a href="" class="menu-lt__category">
-				<img src="img/svg/catalog_hoztovari.svg" alt="" class="menu-lt__cat-logo">
-				<span class="menu-lt__text">Хозтовары</span>
-			</a>
+			<ul data-one-spoller data-spollers="999,max" class="menu-lt__list">
+				<li class="menu-lt__item">
+					<a data-spoller href="#clothes" class="menu-lt__category _popup-link">
+						<img src="img/svg/catalog_specodejda.svg" alt="" class="menu-lt__cat-logo">
+						<span class="menu-lt__text">Спецодежда</span>
+					</a>
+					<div class="popup popup_clothes">
+						<div class="popup__content">
+							<div class="popup__body">
+
+								<div class="menu-lt__inner _tabs">
+									<div class="menu-lt__subcategory">
+										<ul class="menu-lt__sub-list">
+											<li class="menu-lt__sub-item _tabs-item _active"><a href="" class="menu-lt__sub-link">Утепленная спецодежда</a></li>
+											<li class="menu-lt__sub-item _tabs-item"><a href="" class="menu-lt__sub-link">Летняя спецодежда</a></li>
+											<li class="menu-lt__sub-item _tabs-item"><a href="" class="menu-lt__sub-link">Защитная спецодежда</a></li>
+											<li class="menu-lt__sub-item _tabs-item"><a href="" class="menu-lt__sub-link">Медицинская одежда</a></li>
+											<li class="menu-lt__sub-item _tabs-item"><a href="" class="menu-lt__sub-link">Форма охранника</a></li>
+											<li class="menu-lt__sub-item _tabs-item"><a href="" class="menu-lt__sub-link">Поварская форма</a></li>
+											<li class="menu-lt__sub-item _tabs-item"><a href="" class="menu-lt__sub-link">Форма для обслуживающего персонала</a></li>
+										</ul>
+									</div>
+									<div class="menu-lt__images">
+										<img src="img/svg/catalog_specodejda.svg" alt="" class="menu-lt__img _tabs-block _active">
+										<img src="img/pictures/human_2.png" alt="" class="menu-lt__img _tabs-block">
+										<img src="img/pictures/human_3.png" alt="" class="menu-lt__img _tabs-block">
+										<img src="img/pictures/human_4.png" alt="" class="menu-lt__img _tabs-block">
+										<img src="img/pictures/human_5.png" alt="" class="menu-lt__img _tabs-block">
+										<img src="img/pictures/human_1.png" alt="" class="menu-lt__img _tabs-block">
+										<img src="img/pictures/human_2.png" alt="" class="menu-lt__img _tabs-block">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="menu-lt__item">
+					<a data-spoller href="#shoes" class="menu-lt__category _popup-link">
+						<img src="img/svg/catalog_specobuv.svg" alt="" class="menu-lt__cat-logo">
+						<span class="menu-lt__text">Спецобувь</span>
+					</a>
+					<div class="popup popup_shoes">
+						<div class="popup__content">
+							<div class="popup__body">
+								<div class="menu-lt__inner _tabs">
+									<div class="menu-lt__subcategory">
+										<ul class="menu-lt__sub-list">
+											<li class="menu-lt__sub-item _tabs-item _active"><a href="" class="menu-lt__sub-link">Ботинки</a></li>
+											<li class="menu-lt__sub-item _tabs-item"><a href="" class="menu-lt__sub-link">Полуботинки</a></li>
+											<li class="menu-lt__sub-item _tabs-item"><a href="" class="menu-lt__sub-link">Сапоги</a></li>
+											<li class="menu-lt__sub-item _tabs-item"><a href="" class="menu-lt__sub-link">Валенки</a></li>
+											<li class="menu-lt__sub-item _tabs-item"><a href="" class="menu-lt__sub-link">Сандалии</a></li>
+											<li class="menu-lt__sub-item _tabs-item"><a href="" class="menu-lt__sub-link">Повседневная обувь</a></li>
+										</ul>
+									</div>
+									<div class="menu-lt__images">
+										<img src="img/svg/catalog_specobuv.svg" alt="" class="menu-lt__img _tabs-block _active">
+										<img src="img/pictures/human_2.png" alt="" class="menu-lt__img _tabs-block">
+										<img src="img/pictures/human_3.png" alt="" class="menu-lt__img _tabs-block">
+										<img src="img/pictures/human_4.png" alt="" class="menu-lt__img _tabs-block">
+										<img src="img/pictures/human_5.png" alt="" class="menu-lt__img _tabs-block">
+										<img src="img/pictures/human_1.png" alt="" class="menu-lt__img _tabs-block">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="menu-lt__item">
+					<a data-spoller href="#siz" class="menu-lt__category _popup-link">
+						<img src="img/svg/catalog_siz.svg" alt="" class="menu-lt__cat-logo">
+						<span class="menu-lt__text">СИЗ</span>
+					</a>
+					<div class="popup popup_siz">
+						<div class="popup__content">
+							<div class="popup__body">
+								<div class="menu-lt__inner _tabs">
+									<div class="menu-lt__subcategory">
+										<ul class="menu-lt__sub-list">
+											<li class="menu-lt__sub-item _tabs-item _active"><a href="" class="menu-lt__sub-link">Защита головы и лица</a></li>
+											<li class="menu-lt__sub-item _tabs-item"><a href="" class="menu-lt__sub-link">Защита органов дыхания</a></li>
+											<li class="menu-lt__sub-item _tabs-item"><a href="" class="menu-lt__sub-link">Защита рук</a></li>
+											<li class="menu-lt__sub-item _tabs-item"><a href="" class="menu-lt__sub-link">Защита от падения</a></li>
+											<li class="menu-lt__sub-item _tabs-item"><a href="" class="menu-lt__sub-link">Защита органов слуха</a></li>
+											<li class="menu-lt__sub-item _tabs-item"><a href="" class="menu-lt__sub-link">Защитные костюмы</a></li>
+											<li class="menu-lt__sub-item _tabs-item"><a href="" class="menu-lt__sub-link">Аптечки</a></li>
+											<li class="menu-lt__sub-item _tabs-item"><a href="" class="menu-lt__sub-link">Диэлектрика</a></li>
+											<li class="menu-lt__sub-item _tabs-item"><a href="" class="menu-lt__sub-link">Крема защитные</a></li>
+											<li class="menu-lt__sub-item _tabs-item"><a href="" class="menu-lt__sub-link">Наколенники</a></li>
+										</ul>
+									</div>
+									<div class="menu-lt__images">
+										<img src="img/svg/catalog_siz.svg" alt="" class="menu-lt__img _tabs-block _active">
+										<img src="img/pictures/human_2.png" alt="" class="menu-lt__img _tabs-block">
+										<img src="img/pictures/human_3.png" alt="" class="menu-lt__img _tabs-block">
+										<img src="img/pictures/human_4.png" alt="" class="menu-lt__img _tabs-block">
+										<img src="img/pictures/human_5.png" alt="" class="menu-lt__img _tabs-block">
+										<img src="img/pictures/human_1.png" alt="" class="menu-lt__img _tabs-block">
+										<img src="img/pictures/human_2.png" alt="" class="menu-lt__img _tabs-block">
+										<img src="img/pictures/human_3.png" alt="" class="menu-lt__img _tabs-block">
+										<img src="img/pictures/human_4.png" alt="" class="menu-lt__img _tabs-block">
+										<img src="img/pictures/human_5.png" alt="" class="menu-lt__img _tabs-block">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="menu-lt__item">
+					<a href="" class="menu-lt__category">
+						<img src="img/svg/catalog_hoztovari.svg" alt="" class="menu-lt__cat-logo">
+						<span class="menu-lt__text">Хозтовары</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="menu-mobile">
+		<div class="menu-mobile__close">
+			<img src="img/svg/icon_close_big.svg" alt="">
 		</div>
 	</div>
 </header>
