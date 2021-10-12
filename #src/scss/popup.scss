@@ -64,14 +64,14 @@
 	}
 	// .popup__close
 	&__close {
-		width: 15px;
-		height: 15px;
+		width: 32px;
+		height: 32px;
 		position: absolute;
 		top: 0px;
 		right: 0px;
 		cursor: pointer;
 		z-index: 30;
-		background: url("../img/svg/icon_close.svg") 0 0 no-repeat;
+		background: url("../img/svg/icon_close_big.svg") 0 0 no-repeat;
 	}
 }
 
@@ -83,7 +83,7 @@
 	left: $menuLtMargin;
 	padding: 0;
 	width: calc(100vw - $menuLtMargin);
-	overflow: auto;
+	overflow: hidden;
 	&::before {
 		width: calc(100vw - $menuLtMargin);
 		left: $menuLtMargin;
@@ -94,6 +94,7 @@
 		background-size: auto;
 	}
 	&._active {
+		overflow: hidden;
 		.popup__body {
 			transform: translate(0px, 0px);
 		}
@@ -109,18 +110,29 @@
 	}
 	.popup__content {
 		justify-content: flex-start;
+		height: 100%;
 	}
 	.popup__body {
 		transform: translate(-100%, 0px);
 		max-width: 100%;
 		background-color: transparent;
-		height: 100vh;
+		height: 100%;
 		padding-left: 0;
 		padding-top: 156px;
+		padding-right: 124px;
 		@media (max-width: $md3+px) {
 			transform: translate(0px, 0px);
 			padding: 0;
 			height: auto;
+		}
+	}
+	.popup__close {
+		position: static;
+		background: url(../img/svg/icon_close_big.svg) center 0 no-repeat;
+		flex: 0 0 3%;
+		min-width: 32px;
+		@media (max-width: $md3+px) {
+			display: none;
 		}
 	}
 }

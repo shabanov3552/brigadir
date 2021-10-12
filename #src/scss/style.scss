@@ -30,7 +30,7 @@ $maxWidth: 1920;
 $maxWidthContainer: 1440;
 $md1: $maxWidthContainer + 12;
 $md2: 1280;
-$md3: 1000;
+$md3: 998;
 $md4: 768;
 $md5: 480;
 $md6: 375;
@@ -66,7 +66,7 @@ body {
 	&._loaded {
 	}
 
-	@media (max-width: $md4+px) {
+	@media (max-width: $md3+px) {
 		padding-left: 0;
 	}
 }
