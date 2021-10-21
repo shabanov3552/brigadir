@@ -59,7 +59,7 @@ async function form_submit(e) {
 
 function form_validate(form) {
 	let error = 0;
-	let form_req = form.querySelectorAll('._req');
+	let form_req = form.querySelectorAll('.js_req');
 	if (form_req.length > 0) {
 		for (let index = 0; index < form_req.length; index++) {
 			const el = form_req[index];
@@ -368,14 +368,12 @@ function inputs_init(inputs) {
 			const input = inputs[index];
 			const input_g_value = input.getAttribute('data-value');
 			input_placeholder_add(input);
+			const clear_input = input.nextElementSibling.nextElementSibling;
 			if (input.value != '' && input.value != input_g_value) {
 				input_focus_add(input);
 			}
 			input.addEventListener('focus', function (e) {
-				if (input.value == input_g_value) {
-					input_focus_add(input);
-					input.value = '';
-				}
+				input_focus_add(input);
 				if (input.getAttribute('data-type') === "pass") {
 					if (input.parentElement.querySelector('._viewpass')) {
 						if (!input.parentElement.querySelector('._viewpass').classList.contains('_active')) {
@@ -398,17 +396,16 @@ function inputs_init(inputs) {
 					}).mask(input);
 					*/
 				}
-				if (input.classList.contains('_phone')) {
+				if (input.classList.contains('js_phone')) {
 					//'+7(999) 999 9999'
 					//'+38(999) 999 9999'
 					//'+375(99)999-99-99'
 					input.classList.add('_mask');
-					Inputmask("+375 (99) 9999999", {
-						//"placeholder": '',
+					Inputmask("+7(999) 999 9999", {
 						clearIncomplete: true,
 						clearMaskOnLostFocus: true,
 						onincomplete: function () {
-							input_clear_mask(input, input_g_value);
+							input_clear_mask(input);
 						}
 					}).mask(input);
 				}
@@ -423,11 +420,15 @@ function inputs_init(inputs) {
 						}
 					}).mask(input);
 				}
-				form_remove_error(input);
+				/* form_remove_error(input); */
+			});
+			clear_input.addEventListener('click', function (e) {
+				input.value = '';
+				input_focus_remove(input)
+
 			});
 			input.addEventListener('blur', function (e) {
 				if (input.value == '') {
-					input.value = input_g_value;
 					input_focus_remove(input);
 					if (input.classList.contains('_mask')) {
 						input_clear_mask(input, input_g_value);
@@ -467,7 +468,12 @@ function inputs_init(inputs) {
 function input_placeholder_add(input) {
 	const input_g_value = input.getAttribute('data-value');
 	if (input.value == '' && input_g_value != '') {
-		input.value = input_g_value;
+		input.insertAdjacentHTML('afterend', '<span class="form__input-clear"><img src="img/svg/icon_clear.svg" alt=""></span>');
+		input.insertAdjacentHTML('afterend', '<span class="form__input-placeholder">' + input_g_value + '</span>');
+	}
+	if (input.value == '' && input_g_value == '') {
+		input.insertAdjacentHTML('afterend', '<span class="form__input-clear"><img src="img/svg/icon_clear.svg" alt=""></span>');
+		input.insertAdjacentHTML('afterend', '<span class="form__input-placeholder"></span>');
 	}
 }
 function input_focus_add(input) {
@@ -480,7 +486,6 @@ function input_focus_remove(input) {
 }
 function input_clear_mask(input, input_g_value) {
 	input.inputmask.remove();
-	input.value = input_g_value;
 	input_focus_remove(input);
 }
 //#endregion

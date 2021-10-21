@@ -1,16 +1,94 @@
 // #region <FORM ()>====================================================================================================
+
 .form {
+	// .form__row
+
 	&__row {
+		display: flex;
 	}
-	&__column {
+
+	// .form__col
+
+	&__col {
+		display: flex;
+		flex-direction: column;
 	}
+
+	// .form__line
+
 	&__line {
+		position: relative;
+		margin: 0px 0px 30px 0px;
+		&._focus {
+			.form__input-placeholder {
+				font-size: 12px;
+				top: -20px;
+				color: #fff;
+			}
+			.form__input-clear {
+				opacity: 1;
+			}
+		}
 	}
+
+	// .form__txta
+
+	&__txta {
+		border-radius: 5px;
+		background-color: #fff;
+		padding: 29px 35px 19px 14px;
+		color: #000000;
+		font-size: 18px;
+		line-height: 22px;
+		width: 100%;
+		resize: vertical;
+	}
+
+	// .form__input
+
 	&__input {
+		border-radius: 5px;
+		background-color: #fff;
+		color: #000000;
+		font-size: 18px;
+		line-height: 22px;
+		width: 100%;
+		height: 48px;
+		padding: 0px 16px;
 	}
-	&__button {
+
+	// .form__input-placeholder
+
+	&__input-placeholder {
+		pointer-events: none;
+		position: absolute;
+		top: 13px;
+		left: 14px;
+		color: rgba(0, 0, 0, 0.604535);
+		font-size: 18px;
+		line-height: 22px;
+		transition: all 0.3s ease 0s;
 	}
+
+	// .form__input-clear
+
+	&__input-clear {
+		opacity: 0;
+		cursor: pointer;
+		position: absolute;
+		right: 16px;
+		top: 17px;
+		transition: all 0.3s ease 0s;
+	}
+
+	// .form__error
+
 	&__error {
+	}
+
+	// .form__button
+
+	&__button {
 	}
 }
 
@@ -160,7 +238,7 @@ textarea.input {
 		opacity: 0;
 		visibility: hidden;
 		&:checked + .checkbox__text:before {
-			background: #fff url("../img/icons/check.svg") center no-repeat;
+			background: url("../img/svg/check.svg") center no-repeat;
 		}
 	}
 	// .checkbox__text
@@ -168,26 +246,28 @@ textarea.input {
 		display: inline-flex;
 		align-items: center;
 		position: relative;
-		font-size: 16px;
-		color: #ffffff;
-		letter-spacing: -0.3px;
-		line-height: calc(20 / 16);
+		font-size: 12px;
+		color: rgba(255, 255, 255, 0.5);
 		cursor: pointer;
+		font-weight: normal;
+		line-height: 16px;
+		letter-spacing: normal;
 		&:before {
 			content: "";
 			align-self: flex-start;
 			margin: 0px 14px 0px 0px;
-			flex: 0 0 20px;
+			flex: 0 0 16px;
 			left: 0;
 			top: 0;
-			width: 20px;
-			height: 18px;
+			width: 16px;
+			height: 16px;
+			border-radius: 2px;
 			background: #fff;
 			border: 1px solid #a7a9ac;
 		}
 	}
 	a {
-		color: #fff;
+		color: rgba(255, 255, 255, 0.5);
 		text-decoration: underline;
 		@media (min-width: 992px) {
 			&:hover {
@@ -197,6 +277,7 @@ textarea.input {
 	}
 	&._error {
 		.checkbox__text {
+			color: #ee1212;
 			&:before {
 				border: 1px solid #ee1212;
 			}
@@ -333,32 +414,34 @@ textarea.input {
 
 // #region <QUANTITY>====================================================================================================
 .quantity {
-	width: 88px;
-	height: 40px;
+	width: 127px;
+	height: 48px;
 	display: flex;
-	border: 1px solid rgba(166, 166, 166, 0.45);
+	border-radius: 5px;
+	overflow: hidden;
 	// .quantity__button
 	&__button {
 		flex: 0 0 30px;
 		position: relative;
 		cursor: pointer;
+		background-color: rgba(255, 255, 255, 0.104868);
 		&::before,
 		&::after {
 			content: "";
 			position: absolute;
-			top: 50%;
-			left: 50%;
+			top: 45%;
+			left: 22%;
 			transition: all 0.3s ease 0s;
-			margin: 0px 0px 0px -4.5px;
-			background-color: #a6a6a6;
-			width: 9px;
-			height: 1px;
+			margin: 0px 0px 0px 0px;
+			background-color: rgba(255, 255, 255, 0.343892);
+			width: 17px;
+			height: 3px;
 		}
-		@media (min-width: $md2+px) {
+		@media (min-width: $md3+px) {
 			&:hover {
 				&::before,
 				&::after {
-					background-color: rgba(0, 0, 0, 0.5);
+					background-color: #fff;
 				}
 			}
 		}
@@ -376,9 +459,11 @@ textarea.input {
 	&__input {
 		flex: 1 1 auto;
 		input {
+			background-color: rgba(255, 255, 255, 0.104868);
 			height: 100%;
-			color: #a6a6a6;
-			font-size: 12px;
+			color: #fff;
+			font-size: 18px;
+			line-height: 22px;
 			width: 100%;
 			text-align: center;
 		}

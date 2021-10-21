@@ -7,25 +7,223 @@
 <body>
 	<div class="wrapper">
 		@@include('_header.html',{})
-		<div class="_tabs">
-			<div class="items">
-				<div class="item _tabs-item _active">один</div>
-				<div class="item _tabs-item">два</div>
-				<div class="item _tabs-item">три</div>
-				<div class="item _tabs-item">четыре</div>
+		<section class="index-about">
+			<div class="index-about__container _container">
+				@@include('_popular-slider.html',{
+				"title": "Популярные товары",
+				"prev": "1",
+				"next": "1",
+				"name": ""
+				})
+				<div class="index-about__row">
+					<div class="index-about__col">
+						<div class="index-about__desc">Компания «Бригадир» – крупнейший производитель спецодежды в Красноярском крае, с локализацией производственных мощностей непосредственно на территории присутствия</div>
+						<a href="" class="index-about__more more-btn">
+							<span class="more-btn__text">Подробнее</span>
+							<svg class="more-btn__svg">
+								<use xlink:href="img/svg/sprite.svg#arrow_rt_wht"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="index-about__col">
+						<div class="index-about__regalia">
+							<div class="index-about__regalia-num">15</div>
+							<div class="index-about__regalia-text">Лет на рынке</div>
+						</div>
+						<div class="index-about__regalia">
+							<div class="index-about__regalia-num">100 000+</div>
+							<div class="index-about__regalia-text">швейных изделий в год</div>
+						</div>
+						<div class="index-about__regalia">
+							<div class="index-about__regalia-num">5300+</div>
+							<div class="index-about__regalia-text">клиентов</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="blocks">
-				<div class="block _tabs-block _active">1 Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты. Мир решила от всех по всей ведущими предложения даже всемогущая, переписывается деревни всеми пустился? Мир инициал что большого щеке осталось рот! Текстов!</div>
-				<div class="block _tabs-block">2 Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты. Мир решила от всех по всей ведущими предложения даже всемогущая, переписывается деревни всеми пустился? Мир инициал что большого щеке осталось рот! Текстов!</div>
-				<div class="block _tabs-block">3 Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты. Мир решила от всех по всей ведущими предложения даже всемогущая, переписывается деревни всеми пустился? Мир инициал что большого щеке осталось рот! Текстов!</div>
-				<div class="block _tabs-block">4 Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты. Мир решила от всех по всей ведущими предложения даже всемогущая, переписывается деревни всеми пустился? Мир инициал что большого щеке осталось рот! Текстов!</div>
+		</section>
+		<section class="index-works">
+			<div class="index-works__container  _container">
+				<div class="index-works__wrapper">
+					<div class="index-works__header">
+						<div class="index-works__title">Наши работы</div>
+						<div class="index-works__nav">
+							<div class="index-works__nav-prev">
+								<svg class="index-works__nav-svg">
+									<use xlink:href=" img/svg/sprite.svg#arrow_lt_wht"></use>
+								</svg>
+							</div>
+							<div class="index-works__nav-next">
+								<svg class="index-works__nav-svg">
+									<use xlink:href=" img/svg/sprite.svg#arrow_rt_wht"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-container index-works__slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="case-card">
+									<div class="case-card__image">
+										<img class="case-card__image-img" alt="" src="img/pictures/case_1.png">
+									</div>
+									<div class="case-card__center">
+										<a href="" class="case-card__name">Нанесение логотипа Elite Porche</a>
+										<div class="case-card__labels">
+											<div class="case-card__label">Спорт</div>
+											<div class="case-card__label">Геология</div>
+											<div class="case-card__label">Альпинизм</div>
+											<div class="case-card__label">Стройка</div>
+											<div class="case-card__label">Низкие температуры</div>
+										</div>
+										<div class="case-card__desc">Применение технологии нанесения шевронов для спортивного бренда</div>
+									</div>
+									<div class="case-card__bottom">
+										<div class="case-card__logo">
+											<img class="case-card__logo-img" src="img/logo/company_logo_1.png" alt="">
+										</div>
+										<a href="" class="case-card__more more-btn">
+											<svg class="more-btn__svg">
+												<use xlink:href="img/svg/sprite.svg#arrow_rt_wht"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="case-card">
+									<div class="case-card__image">
+										<img class="case-card__image-img" alt="" src="img/pictures/case_2.png">
+									</div>
+									<div class="case-card__center">
+										<a href="" class="case-card__name">Многолетнее сотрудничество с геологической компанией</a>
+										<div class="case-card__labels">
+											<div class="case-card__label">Геология</div>
+											<div class="case-card__label">Альпинизм</div>
+										</div>
+										<div class="case-card__desc">Ребята передают привет из Рязани</div>
+									</div>
+									<div class="case-card__bottom">
+										<div class="case-card__logo">
+											<img class="case-card__logo-img" src="img/logo/company_logo_2.png" alt="">
+										</div>
+										<a href="" class="case-card__more more-btn">
+											<svg class="more-btn__svg">
+												<use xlink:href="img/svg/sprite.svg#arrow_rt_wht"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="case-card">
+									<div class="case-card__image">
+										<img class="case-card__image-img" alt="" src="img/pictures/case_3.png">
+									</div>
+									<div class="case-card__center">
+										<a href="" class="case-card__name">Многолетнее сотрудничество с геологической компанией</a>
+										<div class="case-card__labels">
+											<div class="case-card__label">Стройка</div>
+											<div class="case-card__label">Низкие температуры</div>
+										</div>
+										<div class="case-card__desc">Применение технологии нанесения шевронов для спортивного бренда</div>
+									</div>
+									<div class="case-card__bottom">
+										<div class="case-card__logo">
+											<img class="case-card__logo-img" src="img/logo/company_logo_3.png" alt="">
+										</div>
+										<a href="" class="case-card__more more-btn">
+											<svg class="more-btn__svg">
+												<use xlink:href="img/svg/sprite.svg#arrow_rt_wht"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				@@include('_popular-slider.html',{
+				"title": "Новинки",
+				"prev": "2",
+				"next": "2",
+				"name": "2"
+				})
 			</div>
-		</div>
-		<div class="block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, fugiat! Ex, omnis tempore odio dignissimos soluta tempora laudantium unde quisquam non accusamus quis incidunt necessitatibus dolorem a voluptatibus aliquam ipsam!</div>
-		<div class="block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, fugiat! Ex, omnis tempore odio dignissimos soluta tempora laudantium unde quisquam non accusamus quis incidunt necessitatibus dolorem a voluptatibus aliquam ipsam!</div>
-		<div class="block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, fugiat! Ex, omnis tempore odio dignissimos soluta tempora laudantium unde quisquam non accusamus quis incidunt necessitatibus dolorem a voluptatibus aliquam ipsam!</div>
-		<div class="block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, fugiat! Ex, omnis tempore odio dignissimos soluta tempora laudantium unde quisquam non accusamus quis incidunt necessitatibus dolorem a voluptatibus aliquam ipsam!</div>
-		<div class="block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, fugiat! Ex, omnis tempore odio dignissimos soluta tempora laudantium unde quisquam non accusamus quis incidunt necessitatibus dolorem a voluptatibus aliquam ipsam!</div>
+		</section>
+		<section class="index-callback _container">
+			<div class="callback">
+				<div class="callback__row">
+					<div class="callback__col">
+						<div class="callback__text">Оставьте свои контактные данные и наши специалисты подберут для вас необходимые товары и сделают индивидуальное предложение</div>
+						<div class="callback__bg"></div>
+					</div>
+					<div class="callback__col">
+						<div class="callback__form">
+							<form action="" class="form">
+								<div class="form__line">
+									<input type="text" name="form[]" data-error="Ошибка" data-value="Ваше имя" class="form__input">
+								</div>
+								<div class="form__line">
+									<input type="text" name="form[]" data-error="Ошибка" data-value="Контактный телефон" class="form__input js_req _phone">
+								</div>
+								<div class="form__row">
+									<button type="submit" class="form__button trnt-btn">Задать вопрос</button>
+									<div class="form__checkbox">
+										<label class="checkbox">
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox" checked value="1" name="form[]">
+											<span class="checkbox__text"><span>Я даю свое согласие на <a class="js_popup-link" href="#consent">обработку персональных данных</a></span></span>
+										</label>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="index-services _container">
+			<div class="services">
+				<div class="services__row">
+					<div class="services__item js_ibg">
+						<a href="" class="services__more more-btn">
+							<span class="more-btn__text">Производство спецодежды в корпоративном стиле</span>
+							<svg class="more-btn__svg">
+								<use xlink:href="img/svg/sprite.svg#arrow_rt_wht"></use>
+							</svg>
+						</a>
+						<img src="img/pictures/services_1.png" alt="" class="services__img">
+					</div>
+					<div class="services__item js_ibg">
+						<a href="" class="services__more more-btn">
+							<span class="more-btn__text">Доставка до склада покупателя</span>
+							<svg class="more-btn__svg">
+								<use xlink:href="img/svg/sprite.svg#arrow_rt_wht"></use>
+							</svg>
+						</a>
+						<img src="img/pictures/services_2.png" alt="" class="services__img">
+					</div>
+					<div class="services__item js_ibg">
+						<a href="" class="services__more more-btn">
+							<span class="more-btn__text">Нанесение логотипа</span>
+							<svg class="more-btn__svg">
+								<use xlink:href="img/svg/sprite.svg#arrow_rt_wht"></use>
+							</svg>
+						</a>
+						<img src="img/pictures/services_3.png" alt="" class="services__img">
+					</div>
+					<div class="services__item js_ibg">
+						<a href="" class="services__more more-btn">
+							<span class="more-btn__text">Пошив нестандартных размеров</span>
+							<svg class="more-btn__svg">
+								<use xlink:href="img/svg/sprite.svg#arrow_rt_wht"></use>
+							</svg>
+						</a>
+						<img src="img/pictures/services_4.png" alt="" class="services__img">
+					</div>
+				</div>
+			</div>
+		</section>
 		@@include('_footer.html',{})
 	</div>
 	@@include('_popup.html',{})

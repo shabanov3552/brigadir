@@ -15,7 +15,7 @@ DynamicAdapt.prototype.init = function () {
 	const _this = this;
 	// массив объектов
 	this.оbjects = [];
-	this.daClassname = "_dynamic_adapt_";
+	this.daClassname = "js_dynamic_adapt";
 	// массив DOM-элементов
 	this.nodes = document.querySelectorAll("[data-da]");
 

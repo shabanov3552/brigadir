@@ -133,29 +133,3 @@ body {
 }
 
 // #endregion
-
-._tabs {
-}
-
-._tabs-block {
-}
-
-.items {
-	display: flex;
-	justify-content: space-between;
-	background-color: #535353;
-}
-
-.item {
-	background-color: #434343;
-	padding: 50px;
-	cursor: pointer;
-	&._active {
-		background-color: #000;
-	}
-}
-
-.blocks {
-}
-.block {
-}

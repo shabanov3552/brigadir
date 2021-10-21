@@ -1,6 +1,6 @@
 //#region IBG
 /* function ibg() {
-	let ibg = document.querySelectorAll("._ibg");
+	let ibg = document.querySelectorAll(".js_ibg");
 	for (var i = 0; i < ibg.length; i++) {
 		if (ibg[i].querySelector('img') && ibg[i].querySelector('img').getAttribute('src') != null) {
 			ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
@@ -130,15 +130,14 @@ if (title) {
 //#endregion
 
 //#region Tabs
-let tabs = document.querySelectorAll("._tabs");
+let tabs = document.querySelectorAll(".js_tabs");
 for (let index = 0; index < tabs.length; index++) {
 	let tab = tabs[index];
-	let tabs_items = tab.querySelectorAll("._tabs-item");
-	let tabs_blocks = tab.querySelectorAll("._tabs-block");
+	let tabs_items = tab.querySelectorAll(".js_tabs-item");
+	let tabs_blocks = tab.querySelectorAll(".js_tabs-block");
 	for (let index = 0; index < tabs_items.length; index++) {
 		let tabs_item = tabs_items[index];
 		if (tabs_item.closest('.menu-lt__sub-item')) {
-
 			tabs_item.addEventListener("mouseenter", function (e) {
 				for (let index = 0; index < tabs_items.length; index++) {
 					let tabs_item = tabs_items[index];
@@ -161,7 +160,6 @@ for (let index = 0; index < tabs.length; index++) {
 				e.preventDefault();
 			});
 		}
-
 	}
 }
 //#endregion
@@ -295,7 +293,7 @@ if (spollersArray.length > 0) {
 //#endregion
 
 //#region Gallery
-let gallery = document.querySelectorAll('._gallery');
+let gallery = document.querySelectorAll('.js_gallery');
 if (gallery) {
 	gallery_init();
 }
@@ -312,7 +310,7 @@ function gallery_init() {
 //#endregion
 
 //#region Popups
-let popup_link = document.querySelectorAll('._popup-link');
+let popup_link = document.querySelectorAll('.js_popup-link');
 let popups = document.querySelectorAll('.popup');
 for (let index = 0; index < popup_link.length; index++) {
 	const el = popup_link[index];
