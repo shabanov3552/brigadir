@@ -753,197 +753,6 @@ for (let index = 0; index < viewPass.length; index++) {
 }
 //#endregion
 
-//#region Select
-let selects = document.getElementsByTagName('select');
-if (selects.length > 0) {
-	selects_init();
-}
-function selects_init() {
-	for (let index = 0; index < selects.length; index++) {
-		const select = selects[index];
-		select_init(select);
-	}
-	//select_callback();
-	document.addEventListener('click', function (e) {
-		selects_close(e);
-	});
-	document.addEventListener('keydown', function (e) {
-		if (e.code === 'Escape') {
-			selects_close(e);
-		}
-	});
-}
-function selects_close(e) {
-	const selects = document.querySelectorAll('.select');
-	if (!e.target.closest('.select') && !e.target.classList.contains('_option')) {
-		for (let index = 0; index < selects.length; index++) {
-			const select = selects[index];
-			const select_body_options = select.querySelector('.select__options');
-			select.classList.remove('_active');
-			_slideUp(select_body_options, 100);
-		}
-	}
-}
-function select_init(select) {
-	const select_parent = select.parentElement;
-	const select_modifikator = select.getAttribute('class');
-	const select_selected_option = select.querySelector('option:checked');
-	select.setAttribute('data-default', select_selected_option.value);
-	select.style.display = 'none';
-
-	select_parent.insertAdjacentHTML('beforeend', '<div class="select select_' + select_modifikator + '"></div>');
-
-	let new_select = select.parentElement.querySelector('.select');
-	new_select.appendChild(select);
-	select_item(select);
-}
-function select_item(select) {
-	const select_parent = select.parentElement;
-	const select_items = select_parent.querySelector('.select__item');
-	const select_options = select.querySelectorAll('option');
-	const select_selected_option = select.querySelector('option:checked');
-	const select_selected_text = select_selected_option.text;
-	const select_type = select.getAttribute('data-type');
-
-	if (select_items) {
-		select_items.remove();
-	}
-
-	let select_type_content = '';
-	if (select_type == 'input') {
-		select_type_content = '<div class="select__value icon-select-arrow"><input autocomplete="off" type="text" name="form[]" value="' + select_selected_text + '" data-error="Ошибка" data-value="' + select_selected_text + '" class="select__input"></div>';
-	} else {
-		select_type_content = '<div class="select__value icon-select-arrow"><span>' + select_selected_text + '</span></div>';
-	}
-
-	select_parent.insertAdjacentHTML('beforeend',
-		'<div class="select__item">' +
-		'<div class="select__title">' + select_type_content + '</div>' +
-		'<div hidden class="select__options">' + select_get_options(select_options) + '</div>' +
-		'</div></div>');
-
-	select_actions(select, select_parent);
-}
-function select_actions(original, select) {
-	const select_item = select.querySelector('.select__item');
-	const selectTitle = select.querySelector('.select__title');
-	const select_body_options = select.querySelector('.select__options');
-	const select_options = select.querySelectorAll('.select__option');
-	const select_type = original.getAttribute('data-type');
-	const select_input = select.querySelector('.select__input');
-
-	selectTitle.addEventListener('click', function (e) {
-		selectItemActions();
-	});
-
-	function selectMultiItems() {
-		let selectedOptions = select.querySelectorAll('.select__option');
-		let originalOptions = original.querySelectorAll('option');
-		let selectedOptionsText = [];
-		for (let index = 0; index < selectedOptions.length; index++) {
-			const selectedOption = selectedOptions[index];
-			originalOptions[index].removeAttribute('selected');
-			if (selectedOption.classList.contains('_selected')) {
-				const selectOptionText = selectedOption.innerHTML;
-				selectedOptionsText.push(selectOptionText);
-				originalOptions[index].setAttribute('selected', 'selected');
-			}
-		}
-		select.querySelector('.select__value').innerHTML = '<span>' + selectedOptionsText + '</span>';
-	}
-	function selectItemActions(type) {
-		if (!type) {
-			let selects = document.querySelectorAll('.select');
-			for (let index = 0; index < selects.length; index++) {
-				const select = selects[index];
-				const select_body_options = select.querySelector('.select__options');
-				if (select != select_item.closest('.select')) {
-					select.classList.remove('_active');
-					_slideUp(select_body_options, 100);
-				}
-			}
-			_slideToggle(select_body_options, 100);
-			select.classList.toggle('_active');
-		}
-	}
-	for (let index = 0; index < select_options.length; index++) {
-		const select_option = select_options[index];
-		const select_option_value = select_option.getAttribute('data-value');
-		const select_option_text = select_option.innerHTML;
-
-		if (select_type == 'input') {
-			select_input.addEventListener('keyup', select_search);
-		} else {
-			if (select_option.getAttribute('data-value') == original.value && !original.hasAttribute('multiple')) {
-				select_option.style.display = 'none';
-			}
-		}
-		select_option.addEventListener('click', function () {
-			for (let index = 0; index < select_options.length; index++) {
-				const el = select_options[index];
-				el.style.display = 'block';
-			}
-			if (select_type == 'input') {
-				select_input.value = select_option_text;
-				original.value = select_option_value;
-			} else {
-				if (original.hasAttribute('multiple')) {
-					select_option.classList.toggle('_selected');
-					selectMultiItems();
-				} else {
-					select.querySelector('.select__value').innerHTML = '<span>' + select_option_text + '</span>';
-					original.value = select_option_value;
-					select_option.style.display = 'none';
-				}
-			}
-			let type;
-			if (original.hasAttribute('multiple')) {
-				type = 'multiple';
-			}
-			selectItemActions(type);
-		});
-	}
-}
-function select_get_options(select_options) {
-	if (select_options) {
-		let select_options_content = '';
-		for (let index = 0; index < select_options.length; index++) {
-			const select_option = select_options[index];
-			const select_option_value = select_option.value;
-			if (select_option_value != '') {
-				const select_option_text = select_option.innerHTML;
-				select_options_content = select_options_content + '<div data-value="' + select_option_value + '" class="select__option">' + select_option_text + '</div>';
-			}
-		}
-		return select_options_content;
-	}
-}
-function select_search(e) {
-	let select_block = e.target.closest('.select ').querySelector('.select__options');
-	let select_options = e.target.closest('.select ').querySelectorAll('.select__option');
-	let select_search_text = e.target.value.toUpperCase();
-
-	for (let i = 0; i < select_options.length; i++) {
-		let select_option = select_options[i];
-		let select_txt_value = select_option.textContent || select_option.innerText;
-		if (select_txt_value.toUpperCase().indexOf(select_search_text) > -1) {
-			select_option.style.display = "";
-		} else {
-			select_option.style.display = "none";
-		}
-	}
-}
-function selects_update_all() {
-	let selects = document.querySelectorAll('select');
-	if (selects) {
-		for (let index = 0; index < selects.length; index++) {
-			const select = selects[index];
-			select_item(select);
-		}
-	}
-}
-//#endregion
-
 //#region Placeholers
 let inputs = document.querySelectorAll('input[data-value],textarea[data-value]');
 inputs_init(inputs);
@@ -1367,6 +1176,41 @@ if (document.querySelector('.popular__slider2')) {
 	});
 }
 
+if (document.querySelector('.popular__slider3')) {
+	new Swiper('.popular__slider3', {
+		/* autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		}, */
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+			},
+			600: {
+				slidesPerView: 2,
+			},
+			980: {
+				slidesPerView: 3,
+			},
+			1400: {
+				slidesPerView: 4,
+			},
+			1740: {
+				slidesPerView: 5,
+			},
+		},
+		speed: 800,
+		observer: true,
+		observeParents: true,
+		slidesPerView: 5,
+		loop: true,
+		navigation: {
+			nextEl: ".popular__nav-next_3",
+			prevEl: ".popular__nav-prev_3",
+		},
+	});
+}
+
 if (document.querySelector('.index-works__slider')) {
 	new Swiper('.index-works__slider', {
 		/* autoplay: {
@@ -1397,3 +1241,115 @@ if (document.querySelector('.index-works__slider')) {
 		},
 	});
 }
+
+if (document.querySelector('.slider-product__big')) {
+	new Swiper('.slider-product__big', {
+		navigation: {
+			nextEl: ".slider-product__nav-next",
+			prevEl: ".slider-product__nav-prev",
+		},
+		thumbs: {
+			swiper: {
+				el: '.slider-product__nav',
+				slidesPerView: 6,
+				spaceBetween: 9,
+				breakpoints: {
+					767.98: {
+						direction: "vertical",
+					},
+				},
+			},
+		},
+		spaceBetween: 5,
+	});
+}
+//#region Переключатель отображения в каталоге
+let sort__layout_btns = document.querySelectorAll(".sort__layout-btn");
+
+
+for (let index = 0; index < sort__layout_btns.length; index++) {
+	let catalog__content = document.querySelector(".catalog__content");
+	if (catalog__content === null) {
+		continue;
+	}
+	let row = document.querySelector('.layout-row');
+	let col = document.querySelector('.layout-col ');
+	let sort__layout_btn = sort__layout_btns[index];
+	if (localStorage.getItem('catalog_layout') == 'row') {
+		catalog__content.classList.add('catalog__content_row');
+		catalog__content.classList.remove('catalog__content_col');
+		row.classList.add('_active');
+		col.classList.remove('_active');
+	} else {
+		catalog__content.classList.add('catalog__content_col');
+		catalog__content.classList.remove('catalog__content_row');
+		col.classList.add('_active');
+		row.classList.remove('_active');
+	}
+	sort__layout_btn.addEventListener("click", function (e) {
+		if (col.classList.contains('_active')) {
+			catalog__content.classList.add('catalog__content_row');
+			catalog__content.classList.remove('catalog__content_col');
+			localStorage.setItem('catalog_layout', 'row')
+		}
+		if (row.classList.contains('_active')) {
+			catalog__content.classList.remove('catalog__content_row');
+			catalog__content.classList.add('catalog__content_col');
+			localStorage.setItem('catalog_layout', 'col')
+		}
+		for (let index = 0; index < sort__layout_btns.length; index++) {
+			let sort__layout_btn = sort__layout_btns[index];
+			sort__layout_btn.classList.remove('_active');
+		}
+		sort__layout_btn.classList.add('_active');
+	});
+};
+
+//#endregion
+
+//#region автовысота для textarea
+
+document.addEventListener("click", function (e) {
+	const el = e.target;
+	if (el.closest('textarea')) {
+		el.style.height = el.setAttribute('style', 'height: ' + el.scrollHeight + 'px');
+		el.classList.add('auto');
+		el.addEventListener('input', e => {
+			el.style.height = 'auto';
+			el.style.height = (el.scrollHeight) + 10 + 'px';
+		});
+	}
+});
+
+//#endregion
+
+//#region Кнопка вверх и лого
+
+
+/* window.addEventListener('scroll', buttonToTop);
+function buttonToTop(e) {
+	let scr_val = window.pageYOffset;
+	const btnTop = document.querySelector('.top-button');
+	const btnLogo = document.querySelector('.catalog-btn__logo');
+	if (scr_val > 1500) {
+		btnTop.classList.add('_active');
+		btnLogo.classList.add('_active');
+	} else {
+		btnTop.classList.remove('_active');
+		btnLogo.classList.remove('_active');
+	}
+	btnTop.addEventListener("click", function (e) {
+		e.preventDefault()
+		window.scrollTo(0, 0);
+	});
+}; */
+
+//#endregion
+
+//#region nice-select init
+
+$(document).ready(function () {
+	$('select').niceSelect();
+});
+
+//#endregion

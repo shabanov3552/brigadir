@@ -4,6 +4,7 @@
 	border-top: 3px dashed #a4a4a4;
 	padding: 25px 124px 0px 52px;
 	margin: 0px 0px 25px 0px;
+	transition: all 0.3s ease 0s;
 	@media (max-width: $md2+px) {
 		padding: 25px 100px 0px 40px;
 	}
@@ -24,6 +25,7 @@
 		left: 8.334%;
 		top: 7px;
 		z-index: 10000;
+		transition: all 0.3s ease 0s;
 		&::before {
 			visibility: visible;
 			position: absolute;

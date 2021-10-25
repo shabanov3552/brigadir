@@ -34,6 +34,7 @@
 		background: rgba(255, 255, 255, 0.2);
 	}
 }
+
 .trnt-btn {
 	background: transparent;
 	color: #fff;
@@ -53,6 +54,7 @@
 		background-color: #fff;
 	}
 }
+
 .card {
 	border: 1px solid #818181;
 	background: #515151;
@@ -377,6 +379,8 @@
 	&__nav-prev {
 	}
 
+	&__nav-prev_3,
+	&__nav-next_3,
 	&__nav-prev_2,
 	&__nav-next_2,
 	&__nav-prev_1,
@@ -406,11 +410,47 @@
 		}
 	}
 }
+
+.page-title {
+	padding: 0px 160px 0px 50px;
+	height: 340px;
+	margin: 0px 0px 50px 0px;
+
+	// .page-title__content
+
+	&__content {
+		padding: 0px 0px 40px 100px;
+		height: 100%;
+		display: flex;
+		align-items: flex-end;
+		.page-title__img {
+			object-fit: contain;
+		}
+	}
+
+	// .page-title__text
+
+	&__text {
+		color: #5e5e5e;
+		position: relative;
+		z-index: 2;
+		font-weight: 600;
+		font-size: 54px;
+		line-height: 66px;
+	}
+
+	// .page-title__img
+
+	&__img {
+	}
+}
+
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
 // #region .js_ibg
 .js_ibg {
 	position: relative;
+	video,
 	img {
 		position: absolute;
 		width: 100%;

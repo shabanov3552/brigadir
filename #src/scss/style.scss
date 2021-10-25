@@ -88,6 +88,7 @@ body {
 
 @import "forms";
 @import "ui";
+@import "nice-select";
 
 // #endregion
 
@@ -95,11 +96,14 @@ body {
 
 //@import "datepicker";
 //@import "lightgallery";
-//@import "pagging";
+@import "pagging";
+@import "breadcrumbs";
 @import "popup";
 @import "header";
 @import "footer";
 @import "home";
+@import "catalog";
+@import "product";
 
 // #endregion
 
