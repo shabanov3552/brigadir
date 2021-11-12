@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+	<title>О компании</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.min.css?_v=20211113023019">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+	<div class="header__wrapper">
+		<a href="index.html" class="header__logo">
+			<svg class="header__logo-svg">
+				<use xlink:href="img/svg/sprite.svg#logo_main"></use>
+			</svg>
+			<span class="header__logo-text">спецодежда</span>
+		</a>
+		<div class="header__menu">
+			<nav data-da=".menu-mobile,998,2" class="menu__body">
+				<ul class="menu__list">
+					<li class="menu__item"><a href="about.html" class="menu__link">О компании</a></li>
+					<li class="menu__item">
+						<a href="works.html" class="menu__link">
+							<svg class="menu__green-star">
+								<use xlink:href="img/svg/sprite.svg#green_star"></use>
+							</svg>
+							<span>Наши работы</span>
+						</a>
+					</li>
+					<li class="menu__item menu__item_dropdown">
+						<span class="menu__link">Покупателям</span>
+						<svg class="menu__link-arrow">
+							<use xlink:href="img/svg/sprite.svg#arrow_dropdown"></use>
+						</svg>
+						<ul class="menu__dropdown">
+							<li data-da=".menu__list,998,2" class="menu__item"><a href="delivery.html" class="menu__link">Доставка и оплата</a></li>
+							<li data-da=".menu__list,998,3" class="menu__item"><a href="services.html" class="menu__link">Услуги</a></li>
+							<li data-da=".menu__list,998,4" class="menu__item"><a href="faq.html" class="menu__link">FAQ</a></li>
+						</ul>
+					</li>
+					<li class="menu__item"><a href="articles.html" class="menu__link">Статьи</a></li>
+					<li class="menu__item"><a href="contacts.html" class="menu__link">Контакты</a></li>
+				</ul>
+			</nav>
+		</div>
+		<a href="tel:+78002019329" class="header__phone">
+			<svg class="header__phone-icon">
+				<use xlink:href="img/svg/sprite.svg#icon_phone_header"></use>
+			</svg>
+		</a>
+		<div data-da=".menu-mobile,998,1" class="header__col">
+			<a href="tel:+78002019329" class="header__tel">8 800 201 93 29</a>
+			<a href="#callback" class="header__pseudo-link js_popup-link">Заказать звонок</a>
+			<div class="header__city">
+				<img class="header__city-mark" src="img/svg/icon_mark_grey.svg?_v=1636745419843" alt="">
+				<span class="header__city-text">Ваш город:</span>
+				<a href="" class="header__pseudo-link">Красноярск</a>
+			</div>
+		</div>
+		<div class="header__search">
+			<a href="#search" class="header__search-link js_popup-link">
+				<span class="header__search-text">Поиск по товарам</span>
+				<svg class="header__search-icon">
+					<use xlink:href=" img/svg/sprite.svg#menu_rt_search"></use>
+				</svg>
+			</a>
+		</div>
+		<button type="button" class="icon-menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+	</div>
+	<div class="menu-rt">
+		<a href="#basket" class="menu-rt__link js_popup-link">
+			<span class="menu-rt__count">3</span>
+			<svg class="menu-rt__icon">
+				<use xlink:href="img/svg/sprite.svg#menu_rt_basket"></use>
+			</svg>
+		</a>
+		<a href="#cabinet" class="menu-rt__link js_popup-link">
+			<svg class="menu-rt__icon">
+				<use xlink:href="img/svg/sprite.svg#menu_rt_cabinet"></use>
+			</svg>
+		</a>
+		<a href="favorites.html" class="menu-rt__link">
+			<span class="menu-rt__count">3</span>
+			<svg class="menu-rt__icon">
+				<use xlink:href="img/svg/sprite.svg#menu_rt_favorites"></use>
+			</svg>
+		</a>
+		<a href="compare.html" class="menu-rt__link">
+			<span class="menu-rt__count">3</span>
+			<svg class="menu-rt__icon">
+				<use xlink:href="img/svg/sprite.svg#menu_rt_compare"></use>
+			</svg>
+		</a>
+	</div>
+	<div class="menu-lt" data-da=".menu-mobile,998,3">
+		<div class="menu-lt__body">
+			<div class="menu-lt__logo">
+				<img src="img/logo/catalog_logo.png?_v=1636745419843" alt="">
+			</div>
+			<ul data-one-spoller data-spollers="998,max" class="menu-lt__list">
+				<li class="menu-lt__item">
+					<a data-spoller href="#clothes" class="menu-lt__category js_popup-link">
+						<img src="img/svg/catalog_specodejda.svg?_v=1636745419843" alt="" class="menu-lt__cat-logo">
+						<span class="menu-lt__text">Спецодежда</span>
+					</a>
+					<div class="popup popup_clothes">
+						<div class="popup__content">
+							<div class="popup__body">
+								<div class="menu-lt__inner js_tabs">
+									<div class="menu-lt__subcategory">
+										<ul class="menu-lt__sub-list">
+											<li class="menu-lt__sub-item js_tabs-item _active"><a href="" class="menu-lt__sub-link">Утепленная спецодежда</a></li>
+											<li class="menu-lt__sub-item js_tabs-item"><a href="" class="menu-lt__sub-link">Летняя спецодежда</a></li>
+											<li class="menu-lt__sub-item js_tabs-item"><a href="" class="menu-lt__sub-link">Защитная спецодежда</a></li>
+											<li class="menu-lt__sub-item js_tabs-item"><a href="" class="menu-lt__sub-link">Медицинская одежда</a></li>
+											<li class="menu-lt__sub-item js_tabs-item"><a href="" class="menu-lt__sub-link">Форма охранника</a></li>
+											<li class="menu-lt__sub-item js_tabs-item"><a href="" class="menu-lt__sub-link">Поварская форма</a></li>
+											<li class="menu-lt__sub-item js_tabs-item"><a href="" class="menu-lt__sub-link">Форма для обслуживающего персонала</a></li>
+										</ul>
+									</div>
+									<div class="popup__close"></div>
+									<div class="menu-lt__images">
+										<img src="img/svg/catalog_specodejda.svg?_v=1636745419843" alt="" class="menu-lt__img js_tabs-block _active">
+										<img src="img/pictures/human_2.png?_v=1636745419843" alt="" class="menu-lt__img js_tabs-block">
+										<img src="img/pictures/human_3.png?_v=1636745419843" alt="" class="menu-lt__img js_tabs-block">
+										<img src="img/pictures/human_4.png?_v=1636745419843" alt="" class="menu-lt__img js_tabs-block">
+										<img src="img/pictures/human_5.png?_v=1636745419843" alt="" class="menu-lt__img js_tabs-block">
+										<img src="img/pictures/human_1.png?_v=1636745419843" alt="" class="menu-lt__img js_tabs-block">
+										<img src="img/pictures/human_2.png?_v=1636745419843" alt="" class="menu-lt__img js_tabs-block">
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="menu-lt__item">
+					<a data-spoller href="#shoes" class="menu-lt__category js_popup-link">
+						<img src="img/svg/catalog_specobuv.svg?_v=1636745419843" alt="" class="menu-lt__cat-logo">
+						<span class="menu-lt__text">Спецобувь</span>
+					</a>
+					<div class="popup popup_shoes">
+						<div class="popup__content">
+							<div class="popup__body">
+								<div class="menu-lt__inner js_tabs">
+									<div class="menu-lt__subcategory">
+										<ul class="menu-lt__sub-list">
+											<li class="menu-lt__sub-item js_tabs-item _active"><a href="" class="menu-lt__sub-link">Летняя обувь</a></li>
+											<li class="menu-lt__sub-item js_tabs-item"><a href="" class="menu-lt__sub-link">Зимняя обувь</a></li>
+										</ul>
+									</div>
+									<div class="popup__close"></div>
+									<div class="menu-lt__images">
+										<img src="img/svg/catalog_specobuv.svg?_v=1636745419843" alt="" class="menu-lt__img js_tabs-block _active">
+										<img src="img/pictures/shoes.png?_v=1636745419843" alt="" class="menu-lt__img js_tabs-block">
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="menu-lt__item">
+					<a data-spoller href="#siz" class="menu-lt__category js_popup-link">
+						<img src="img/svg/catalog_siz.svg?_v=1636745419843" alt="" class="menu-lt__cat-logo">
+						<span class="menu-lt__text">СИЗ</span>
+					</a>
+					<div class="popup popup_siz">
+						<div class="popup__content">
+							<div class="popup__body">
+								<div class="menu-lt__inner js_tabs">
+									<div class="menu-lt__subcategory">
+										<ul class="menu-lt__sub-list">
+											<li class="menu-lt__sub-item js_tabs-item _active"><a href="" class="menu-lt__sub-link">Защита головы и лица</a></li>
+											<li class="menu-lt__sub-item js_tabs-item"><a href="" class="menu-lt__sub-link">Защита органов дыхания</a></li>
+											<li class="menu-lt__sub-item js_tabs-item"><a href="" class="menu-lt__sub-link">Защита рук</a></li>
+											<li class="menu-lt__sub-item js_tabs-item"><a href="" class="menu-lt__sub-link">Защита от падения</a></li>
+											<li class="menu-lt__sub-item js_tabs-item"><a href="" class="menu-lt__sub-link">Защита органов слуха</a></li>
+											<li class="menu-lt__sub-item js_tabs-item"><a href="" class="menu-lt__sub-link">Защитные костюмы</a></li>
+											<li class="menu-lt__sub-item js_tabs-item"><a href="" class="menu-lt__sub-link">Аптечки</a></li>
+											<li class="menu-lt__sub-item js_tabs-item"><a href="" class="menu-lt__sub-link">Диэлектрика</a></li>
+											<li class="menu-lt__sub-item js_tabs-item"><a href="" class="menu-lt__sub-link">Крема защитные</a></li>
+											<li class="menu-lt__sub-item js_tabs-item"><a href="" class="menu-lt__sub-link">Наколенники</a></li>
+										</ul>
+									</div>
+									<div class="popup__close"></div>
+									<div class="menu-lt__images">
+										<img src="img/svg/catalog_siz.svg?_v=1636745419843" alt="" class="menu-lt__img js_tabs-block _active">
+										<img src="img/pictures/human_2.png?_v=1636745419843" alt="" class="menu-lt__img js_tabs-block">
+										<img src="img/pictures/human_3.png?_v=1636745419843" alt="" class="menu-lt__img js_tabs-block">
+										<img src="img/pictures/human_4.png?_v=1636745419843" alt="" class="menu-lt__img js_tabs-block">
+										<img src="img/pictures/human_5.png?_v=1636745419843" alt="" class="menu-lt__img js_tabs-block">
+										<img src="img/pictures/human_1.png?_v=1636745419843" alt="" class="menu-lt__img js_tabs-block">
+										<img src="img/pictures/human_2.png?_v=1636745419843" alt="" class="menu-lt__img js_tabs-block">
+										<img src="img/pictures/human_3.png?_v=1636745419843" alt="" class="menu-lt__img js_tabs-block">
+										<img src="img/pictures/human_4.png?_v=1636745419843" alt="" class="menu-lt__img js_tabs-block">
+										<img src="img/pictures/human_5.png?_v=1636745419843" alt="" class="menu-lt__img js_tabs-block">
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="menu-lt__item">
+					<a href="" class="menu-lt__category">
+						<img src="img/svg/catalog_hoztovari.svg?_v=1636745419843" alt="" class="menu-lt__cat-logo">
+						<span class="menu-lt__text">Хозтовары</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="menu-mobile">
+		<div class="menu-mobile__close">
+			<img src="img/svg/icon_close_big.svg?_v=1636745419843" alt="">
+		</div>
+	</div>
+</header>
+<main class="page">
+		<nav class="breadcrumbs _container">
+	<ul class="breadcrumbs__list">
+		<li class="breadcrumbs__li">
+			<a href="" class="breadcrumbs__link">
+				<svg class="breadcrumbs__link_back-svg">
+					<use xlink:href="img/svg/sprite.svg#arrow_lt_grn"></use>
+				</svg>
+				Главная
+			</a>
+		</li>
+		<li class="breadcrumbs__li">
+			<span class="breadcrumbs__item">Последняя крошка</span>
+		</li>
+	</ul>
+</nav>
+		<div class="about">
+			<section class="index-about">
+				<div class="index-about__container _container">
+					<div class="index-about__row">
+						<div class="index-about__col">
+							<div class="index-about__title">О компании</div>
+							<div class="index-about__desc">Компания «Бригадир» – крупнейший производитель спецодежды в Красноярском крае, с локализацией производственных мощностей непосредственно на территории присутствия</div>
+						</div>
+						<div class="index-about__col">
+							<div class="index-about__regalia">
+								<div class="index-about__regalia-num">15</div>
+								<div class="index-about__regalia-text">Лет на рынке</div>
+							</div>
+							<div class="index-about__regalia">
+								<div class="index-about__regalia-num">100 000+</div>
+								<div class="index-about__regalia-text">швейных изделий в год</div>
+							</div>
+							<div class="index-about__regalia">
+								<div class="index-about__regalia-num">5300+</div>
+								<div class="index-about__regalia-text">клиентов</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<div class="advantages">
+			<div class="advantages__first-block _container">
+				<div class="advantages__row">
+					<div class="advantages__decs">
+						<div class="advantages__title">Возмещение расходов</div>
+						<div class="advantages__text">Вся продукция, производимая под ТМ «Бригадир» имеет заключение МинПромТорг, о подтверждении производства промышленной продукции на территории Российской Федерации. Что позволяет нашим клиентам возмещать из Фонда Социального Страхования(ФСС) расходы на приобретение спецодежды.</div>
+					</div>
+					<div class="advantages__image">
+						<img src="img/pictures/sertif_1.png?_v=1636745419843" alt="">
+					</div>
+				</div>
+				<div class="advantages__row">
+					<div class="advantages__big-image">
+						<img src="img/pictures/advantages_1.jpg?_v=1636745419843" alt="">
+					</div>
+					<div class="advantages__decs">
+						<div class="advantages__title">Собственное производство</div>
+						<div class="advantages__text">Наш собственный производственный потенциал оснащен самым современным оборудованием. На швейных фабриках работа выполняется на высокопроизводительных японских швейных машинах, проектирование одежды осуществляется с помощью программы автоматизированного проектирования и конструирования лекал и раскладки. Всё это в сочетании с профессионализмом сотрудников дает нам широкие возможности для реализации новых проектов.</div>
+					</div>
+				</div>
+				<div class="advantages__title advantages__title_right">Качество</div>
+			</div>
+			<div class="advantages__second-block">
+				<div class="advantages__row _container">
+					<div class="advantages__col">
+						<div class="advantages__num">01</div>
+						<div class="advantages__text">При разработке спецодежды строго соблюдаются нормы ГОСТ и требования по охране труда</div>
+						<div class="advantages__img-done">
+							<img src="img/svg/check-mark.svg?_v=1636745419843" alt="">
+						</div>
+					</div>
+					<div class="advantages__col">
+						<div class="advantages__num">02</div>
+						<div class="advantages__text">Новые модели перед выводом на рынок проходят испытания</div>
+						<div class="advantages__img-done">
+							<img src="img/svg/check-mark.svg?_v=1636745419843" alt="">
+						</div>
+					</div>
+					<div class="advantages__col">
+						<div class="advantages__num">03</div>
+						<div class="advantages__text">При пошиве одежды каждый этап находится под контролем ОТК</div>
+						<div class="advantages__img-done">
+							<img src="img/svg/check-mark.svg?_v=1636745419843" alt="">
+						</div>
+					</div>
+					<div class="advantages__col">
+						<div class="advantages__num">04</div>
+						<div class="advantages__text">Спецодежда отшивается из высококачественных материалов</div>
+						<div class="advantages__img-done">
+							<img src="img/svg/check-mark.svg?_v=1636745419843" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="advantages__third-block _container">
+				<div class="advantages__title">Сервис</div>
+				<div class="advantages__row">
+					<div class="advantages__text">Для нас важно не только качество выпускаемой продукции, но и комплексный сервис для клиента, нацеленный на долгосрочные отношения. Всем нашим клиентам мы предлагаем широкий спектр услуг, таких как: </div>
+					<div class="advantages__links">
+						<a href="" class="advantages__link">Изготовление одежды по спецзаказу</a>
+						<a href="" class="advantages__link">Наличие на складе линейки нестандартных размеров</a>
+						<a href="" class="advantages__link">Разработка фирменного стиля</a>
+						<a href="" class="advantages__link">Нанесение логотипов</a>
+						<a href="" class="advantages__link">Безвозмездная доставка по России (при заказе от 20000 рублей)</a>
+						<a href="" class="advantages__link">Консультации по вопросам охраны труда</a>
+					</div>
+				</div>
+				<div class="video-block js_video-block">
+					<div class="video-block__play js_video-control">
+						<button type="submit" class="video-block__play-btn">
+							<img src="img/svg/play_btn.svg?_v=1636745419843" alt="">
+							Смотреть видео о нас
+						</button>
+					</div>
+					<div class="video-block__stop js_video-control"></div>
+					<video class="video-block__video js_video" muted pip="false" preload="auto" poster="img/video-prev.png" src=""></video>
+				</div>
+				<div class="advantages__gallery js_gallery">
+					<a href="img/about/01.png" class="advantages__gallery-photo"><img src="img/about/01.png?_v=1636745419843" alt=""></a>
+					<a href="img/about/02.png" class="advantages__gallery-photo"><img src="img/about/02.png?_v=1636745419843" alt=""></a>
+					<a href="img/about/03.png" class="advantages__gallery-photo"><img src="img/about/03.png?_v=1636745419843" alt=""></a>
+					<a href="img/about/04.png" class="advantages__gallery-photo"><img src="img/about/04.png?_v=1636745419843" alt=""></a>
+					<a href="img/about/05.png" class="advantages__gallery-photo"><img src="img/about/05.png?_v=1636745419843" alt=""></a>
+					<a href="img/about/06.png" class="advantages__gallery-photo"><img src="img/about/06.png?_v=1636745419843" alt=""></a>
+				</div>
+				<div class="certificates js_gallery">
+					<div class="certificates__row">
+						<div class="certificates__item">
+							<div class="certificates__image">
+								<a href="img/pictures/sertif_1.png"><img src="img/pictures/sertif_1.png?_v=1636745419843" alt=""></a>
+							</div>
+							<div class="certificates__text">
+								Сертификат НАКС №АЦСТ-27-01337
+							</div>
+						</div>
+						<div class="certificates__item">
+							<div class="certificates__image">
+								<a href="img/pictures/sertif_1.png"><img src="img/pictures/sertif_1.png?_v=1636745419843" alt=""></a>
+							</div>
+							<div class="certificates__text">
+								Сертификат НАКС №АЦСТ-27-01337
+							</div>
+						</div>
+						<div class="certificates__item">
+							<div class="certificates__image">
+								<a href="img/pictures/sertif_1.png"><img src="img/pictures/sertif_1.png?_v=1636745419843" alt=""></a>
+							</div>
+							<div class="certificates__text">
+								Сертификат НАКС №АЦСТ-27-01337
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		</main>
+<footer class="footer">
+	<div class="footer__form">
+		<div class="form-footer _container">
+			<div class="form-footer__row">
+				<div class="form-footer__text">Подписывайтесь и получайте бонусы. Будьте в курсе новостей и выгодных предложений от компании</div>
+				<form action="" class="form-footer__form">
+					<div class="form__line">
+						<input type="email" name="form[]" data-error="Ошибка" data-value="Ваш e-mail" class="form__input form-footer__input">
+					</div>
+					<button type="submit" class="form-footer__btn green-btn">Подписаться</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="footer__row _container">
+		<div class="footer__col">
+			<div class="footer__menu">
+				<ul class="footer__menu-list">
+					<li class="footer__menu-item"><a href="about.html" class="footer__menu-link">О компании</a></li>
+					<li class="footer__menu-item"><a href="works.html" class="footer__menu-link">Наши работы</a></li>
+					<li class="footer__menu-item"><a href="delivery.html" class="footer__menu-link">Доставка и оплата</a></li>
+					<li class="footer__menu-item"><a href="services.html" class="footer__menu-link">Услуги</a></li>
+					<li class="footer__menu-item"><a href="faq.html" class="footer__menu-link">Вопросы и ответы</a></li>
+					<li class="footer__menu-item"><a href="articles.html" class="footer__menu-link">Статьи</a></li>
+					<li class="footer__menu-item"><a href="contacts.html" class="footer__menu-link">Контакты</a></li>
+				</ul>
+			</div>
+			<div class="footer__center">
+				<div class="footer__inner">
+					<a href="tel:88002019329" class="footer__phone">
+						<svg class="footer__phone-svg">
+							<use xlink:href="img/svg/sprite.svg#icon_phone"></use>
+						</svg>
+						<span>8 800 201-93-29</span>
+					</a>
+					<a href="mailto:24@24-cpec.ru" class="footer__mail">
+						<svg class="footer__mail-svg">
+							<use xlink:href="img/svg/sprite.svg#icon_mail"></use>
+						</svg>
+						<span>24@24-cpec.ru</span>
+					</a>
+				</div>
+				<div class="footer__working">
+					<svg class="footer__working-svg">
+						<use xlink:href="img/svg/sprite.svg#icon_watch"></use>
+					</svg>
+					<p class="footer__working-text">ПН–ПТ с 8:30–17:00 <br>СБ и ВС выходные</p>
+				</div>
+				<div class="footer__adders">
+					<svg class="footer__adders-svg">
+						<use xlink:href="img/svg/sprite.svg#icon_mark_wht"></use>
+					</svg>
+					<p class="footer__adders-text">Красноярск, Джамбульская, 16, стр. 2, оф. 3-50</p>
+				</div>
+				<div class="footer__social">
+					<a target="_blank" href="https://www.instagram.com/" class="footer__social-link"><img src="img/pictures/social_inst.png?_v=1636745419843" alt="" class="footer__social-img"></a>
+					<a target="_blank" href="https://vk.com/" class="footer__social-link"><img src="img/pictures/social_vk.png?_v=1636745419843" alt="" class="footer__social-img"></a>
+					<a target="_blank" href="https://www.facebook.com/" class="footer__social-link"><img src="img/pictures/social_fb.png?_v=1636745419843" alt="" class="footer__social-img"></a>
+					<a target="_blank" href="https://ok.ru/" class="footer__social-link"><img src="img/pictures/social_ok.png?_v=1636745419843" alt="" class="footer__social-img"></a>
+					<a target="_blank" href="https://www.youtube.com/" class="footer__social-link"><img src="img/pictures/social_youtube.png?_v=1636745419843" alt="" class="footer__social-img"></a>
+				</div>
+			</div>
+			<div class="footer__markets">
+				<div class="markets" data-da=".footer__col_da,767,2">
+					<div class="markets__title">Мы на маркетах:</div>
+					<div class="markets__row">
+						<a href="" class="markets__link"><img src="img/logo/market_1.png?_v=1636745419843" alt="" class="markets__img"></a>
+						<a href="" class="markets__link"><img src="img/logo/market_2.png?_v=1636745419843" alt="" class="markets__img"></a>
+						<a href="" class="markets__link"><img src="img/logo/market_3.png?_v=1636745419843" alt="" class="markets__img"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__col footer__col_da">
+			<div class="footer__price" data-da=".footer__menu,767,1">
+				<a href="" class="footer__price-link">
+					<svg class="footer__price-svg">
+						<use xlink:href="img/svg/sprite.svg#icon_print"></use>
+					</svg>
+					<span class="footer__price-link-text">Прайслист</span>
+				</a>
+				<span class="footer__price-doc">PDF, 1.8 МB</span>
+			</div>
+			<a href="#callback" class="footer__callback grey-btn js_popup-link">Обратная связь</a>
+			<div class="footer__pay">
+				<div class="payment">
+					<span class="payment__text">Принимаем к оплате:</span>
+					<div class="payment__row">
+						<div class="payment__item">
+							<img src="img/logo/pay_1.png?_v=1636745419843" alt="">
+						</div>
+						<div class="payment__item">
+							<img src="img/logo/pay_2.png?_v=1636745419843" alt="">
+						</div>
+						<div class="payment__item">
+							<img src="img/logo/pay_3.png?_v=1636745419843" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer__bottom copyright _container">
+		<div class="copyright__body">
+			<div class="copyright__item">2022 © ТД «Бригадир»</div>
+			<a href="#policy" class="copyright__item js_popup-link">Политика конфиденциальности</a>
+			<a href="#consent" class="copyright__item js_popup-link">Согласие на обработку персональных данных</a>
+			<a href="https://websalt.ru" target="_blank" class="copyright__item">Создание сайта
+				<svg>
+					<use xlink:href=" img/svg/sprite.svg#logo_salt"></use>
+				</svg>
+			</a>
+		</div>
+	</div>
+</footer>
+<a href="" class="top-button">
+	<svg class="top-button__arrow">
+		<use xlink:href=" img/svg/sprite.svg#arrow_to_top"></use>
+	</svg>
+</a>
+	</div>
+	<div class="popup popup_popup">
+	<div class="popup__content">
+		<div class="popup__body">
+			<div class="popup__close"></div>
+		</div>
+	</div>
+</div>
+<div class="popup popup_cabinet">
+	<div class="popup__content">
+		<div class="popup__body">
+			<div class="popup__close"></div>
+		</div>
+	</div>
+</div>
+<div class="popup popup_basket">
+	<div class="popup__content">
+		<div class="popup__body">
+			<div class="popup__top">
+				<div class="popup__title">Корзина</div>
+				<div class="popup__close"></div>
+			</div>
+			<div class="popup__center">
+				<div class="popup__left">
+					<div class="basket-card">
+						<div class="basket-card__image">
+							<img src="img/catalog/catalog_img_11.png?_v=1636745419843" alt="">
+						</div>
+						<div class="basket-card__center">
+							<a href="" class="basket-card__name">Костюм утепленный "Спектр" с полукомбинезоном</a>
+							<div class="basket-card__bottom">
+								<div class="basket-card__prices">
+									<div class="basket-card__price">19780 руб.</div>
+									<div class="basket-card__price-old">2 800 руб.</div>
+								</div>
+								<div class="quantity">
+
+									<div class="quantity__button quantity__button_minus"></div>
+									<div class="quantity__input">
+										<input autocomplete="off" type="text" name="form[]" value="1">
+									</div>
+									<div class="quantity__button quantity__button_plus"></div>
+								</div>
+								<div class="basket-card__price-total">= 2180 руб.</div>
+							</div>
+						</div>
+						<div class="basket-card__buttons">
+							<a href="" class="basket-card__del">
+								<svg class="basket-card__svg">
+									<use xlink:href="img/svg/sprite.svg#icon_del"></use>
+								</svg>
+							</a>
+							<a href="" class="basket-card__favor">
+								<svg class="basket-card__svg">
+									<use xlink:href="img/svg/sprite.svg#add_favorites"></use>
+								</svg>
+							</a>
+							<a href="" class="basket-card__compare">
+								<svg class="basket-card__svg">
+									<use xlink:href="img/svg/sprite.svg#add_compare"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="basket-card">
+						<div class="basket-card__image">
+							<img src="img/catalog/catalog_img_1.png?_v=1636745419843" alt="">
+						</div>
+						<div class="basket-card__center">
+							<a href="" class="basket-card__name">Костюм утепленный "Спектр" с полукомбинезоном</a>
+							<div class="basket-card__bottom">
+								<div class="basket-card__prices">
+									<div class="basket-card__price">19780 руб.</div>
+									<div class="basket-card__price-old">2 800 руб.</div>
+								</div>
+								<div class="quantity">
+
+									<div class="quantity__button quantity__button_minus"></div>
+									<div class="quantity__input">
+										<input autocomplete="off" type="text" name="form[]" value="1">
+									</div>
+									<div class="quantity__button quantity__button_plus"></div>
+								</div>
+								<div class="basket-card__price-total">= 2180 руб.</div>
+							</div>
+						</div>
+						<div class="basket-card__buttons">
+							<a href="" class="basket-card__del">
+								<svg class="basket-card__svg">
+									<use xlink:href="img/svg/sprite.svg#icon_del"></use>
+								</svg>
+							</a>
+							<a href="" class="basket-card__favor">
+								<svg class="basket-card__svg">
+									<use xlink:href="img/svg/sprite.svg#add_favorites"></use>
+								</svg>
+							</a>
+							<a href="" class="basket-card__compare">
+								<svg class="basket-card__svg">
+									<use xlink:href="img/svg/sprite.svg#add_compare"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="basket-card">
+						<div class="basket-card__image">
+							<img src="img/pictures/case_3.png?_v=1636745419843" alt="">
+						</div>
+						<div class="basket-card__center">
+							<a href="" class="basket-card__name">Костюм утепленный "Спектр" с полукомбинезоном</a>
+							<div class="basket-card__bottom">
+								<div class="basket-card__prices">
+									<div class="basket-card__price">19780 руб.</div>
+									<div class="basket-card__price-old">2 800 руб.</div>
+								</div>
+								<div class="quantity">
+
+									<div class="quantity__button quantity__button_minus"></div>
+									<div class="quantity__input">
+										<input autocomplete="off" type="text" name="form[]" value="1">
+									</div>
+									<div class="quantity__button quantity__button_plus"></div>
+								</div>
+								<div class="basket-card__price-total">= 2180 руб.</div>
+							</div>
+						</div>
+						<div class="basket-card__buttons">
+							<a href="" class="basket-card__del">
+								<svg class="basket-card__svg">
+									<use xlink:href="img/svg/sprite.svg#icon_del"></use>
+								</svg>
+							</a>
+							<a href="" class="basket-card__favor">
+								<svg class="basket-card__svg">
+									<use xlink:href="img/svg/sprite.svg#add_favorites"></use>
+								</svg>
+							</a>
+							<a href="" class="basket-card__compare">
+								<svg class="basket-card__svg">
+									<use xlink:href="img/svg/sprite.svg#add_compare"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="basket-card">
+						<div class="basket-card__image">
+							<img src="img/pictures/human_3.png?_v=1636745419843" alt="">
+						</div>
+						<div class="basket-card__center">
+							<a href="" class="basket-card__name">Костюм утепленный "Спектр" с полукомбинезоном</a>
+							<div class="basket-card__bottom">
+								<div class="basket-card__prices">
+									<div class="basket-card__price">19780 руб.</div>
+									<div class="basket-card__price-old">2 800 руб.</div>
+								</div>
+								<div class="quantity">
+
+									<div class="quantity__button quantity__button_minus"></div>
+									<div class="quantity__input">
+										<input autocomplete="off" type="text" name="form[]" value="1">
+									</div>
+									<div class="quantity__button quantity__button_plus"></div>
+								</div>
+								<div class="basket-card__price-total">= 2180 руб.</div>
+							</div>
+						</div>
+						<div class="basket-card__buttons">
+							<a href="" class="basket-card__del">
+								<svg class="basket-card__svg">
+									<use xlink:href="img/svg/sprite.svg#icon_del"></use>
+								</svg>
+							</a>
+							<a href="" class="basket-card__favor">
+								<svg class="basket-card__svg">
+									<use xlink:href="img/svg/sprite.svg#add_favorites"></use>
+								</svg>
+							</a>
+							<a href="" class="basket-card__compare">
+								<svg class="basket-card__svg">
+									<use xlink:href="img/svg/sprite.svg#add_compare"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="basket-card">
+						<div class="basket-card__image">
+							<img src="img/catalog/catalog_img_7.png?_v=1636745419843" alt="">
+						</div>
+						<div class="basket-card__center">
+							<a href="" class="basket-card__name">Костюм утепленный "Спектр" с полукомбинезоном</a>
+							<div class="basket-card__bottom">
+								<div class="basket-card__prices">
+									<div class="basket-card__price">19780 руб.</div>
+									<div class="basket-card__price-old">2 800 руб.</div>
+								</div>
+								<div class="quantity">
+
+									<div class="quantity__button quantity__button_minus"></div>
+									<div class="quantity__input">
+										<input autocomplete="off" type="text" name="form[]" value="1">
+									</div>
+									<div class="quantity__button quantity__button_plus"></div>
+								</div>
+								<div class="basket-card__price-total">= 2180 руб.</div>
+							</div>
+						</div>
+						<div class="basket-card__buttons">
+							<a href="" class="basket-card__del">
+								<svg class="basket-card__svg">
+									<use xlink:href="img/svg/sprite.svg#icon_del"></use>
+								</svg>
+							</a>
+							<a href="" class="basket-card__favor">
+								<svg class="basket-card__svg">
+									<use xlink:href="img/svg/sprite.svg#add_favorites"></use>
+								</svg>
+							</a>
+							<a href="" class="basket-card__compare">
+								<svg class="basket-card__svg">
+									<use xlink:href="img/svg/sprite.svg#add_compare"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="basket-card">
+						<div class="basket-card__image">
+							<img src="img/catalog/catalog_img_4.png?_v=1636745419843" alt="">
+						</div>
+						<div class="basket-card__center">
+							<a href="" class="basket-card__name">Костюм утепленный "Спектр" с полукомбинезоном</a>
+							<div class="basket-card__bottom">
+								<div class="basket-card__prices">
+									<div class="basket-card__price">19780 руб.</div>
+									<div class="basket-card__price-old">2 800 руб.</div>
+								</div>
+								<div class="quantity">
+
+									<div class="quantity__button quantity__button_minus"></div>
+									<div class="quantity__input">
+										<input autocomplete="off" type="text" name="form[]" value="1">
+									</div>
+									<div class="quantity__button quantity__button_plus"></div>
+								</div>
+								<div class="basket-card__price-total">= 2180 руб.</div>
+							</div>
+						</div>
+						<div class="basket-card__buttons">
+							<a href="" class="basket-card__del">
+								<svg class="basket-card__svg">
+									<use xlink:href="img/svg/sprite.svg#icon_del"></use>
+								</svg>
+							</a>
+							<a href="" class="basket-card__favor">
+								<svg class="basket-card__svg">
+									<use xlink:href="img/svg/sprite.svg#add_favorites"></use>
+								</svg>
+							</a>
+							<a href="" class="basket-card__compare">
+								<svg class="basket-card__svg">
+									<use xlink:href="img/svg/sprite.svg#add_compare"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="popup__right basket-price">
+					<div class="basket-price__wrapper">
+						<div class="basket-price__row">
+							<div class="basket-price__name">Стоимость:</div>
+							<div class="basket-price__cost">2150 <span class="basket-price__rub">руб.</span></div>
+							<div class="basket-price__min">Минимальная сумма заказа 1000 рублей</div>
+						</div>
+						<div class="basket-price__row">
+							<div class="basket-price__name">Со скидкой:</div>
+							<div class="basket-price__cost">1800 <span class="basket-price__rub">руб.</span></div>
+						</div>
+						<div class="basket-price__row">
+							<div class="basket-price__name">Доставка:</div>
+							<div class="basket-price__cost">200 <span class="basket-price__rub">руб.</span></div>
+							<div class="basket-price__txt">Можно выбрать при формлении заказа</div>
+						</div>
+						<div class="basket-price__row basket-price__row_total">
+							<div class="basket-price__name">Итог:</div>
+							<div class="basket-price__cost">2000 <span class="basket-price__rub">руб.</span></div>
+						</div>
+						<div class="basket-price__line form__line">
+							<svg class="basket-price__svg">
+								<use xlink:href="img/svg/sprite.svg#icon_enter"></use>
+							</svg>
+							<input type="text" name="form[]" data-error="Ошибка" data-value="Промокод" class="form__input basket-price__promocode">
+						</div>
+						<button type="submit" class="basket-price__button green-btn">Оформить заказ</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup_basket-empty ">
+	<div class="popup__content">
+		<div class="popup__body">
+			<div class="popup__top">
+				<div class="popup__close"></div>
+			</div>
+			<div class="popup__center">
+				<div class="popup__empty-logo">
+					<svg class="popup__empty-icon">
+						<use xlink:href=" img/svg/sprite.svg#basket_empty"></use>
+					</svg>
+				</div>
+				<div class="popup__empty-text">В корзине <br>пока ничего нет</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup_search">
+	<div class="popup__content">
+		<div class="popup__body">
+			<form action="" class="form">
+				<div class="popup__top">
+					<div class="form__line">
+						<svg>
+							<use xlink:href=" img/svg/sprite.svg#menu_rt_search"></use>
+						</svg>
+						<input type="text" name="form[]" data-value="Поиск по товарам" class="form__input">
+					</div>
+					<div class="popup__close"></div>
+				</div>
+				<div class="popup__center search-result">
+					<a href="" class="search-result__item">
+						<div class="search-result__image"><img src="img/catalog/catalog_img_2.png?_v=1636745419843" alt=""></div>
+						<div class="search-result__content">
+							<div class="search-result__name">Костюм муж утепленный Асгард (куртка и брюки)</div>
+							<div class="search-result__prices">
+								<div class="search-result__price">18000 руб.</div>
+								<div class="search-result__price-old">19080 руб.</div>
+							</div>
+						</div>
+					</a>
+					<a href="" class="search-result__item">
+						<div class="search-result__image"><img src="img/catalog/catalog_img_11.png?_v=1636745419843" alt=""></div>
+						<div class="search-result__content">
+							<div class="search-result__name">Костюм утепленный "Спектр" с полукомбинезоном</div>
+							<div class="search-result__prices">
+								<div class="search-result__price">19780 руб.</div>
+							</div>
+						</div>
+					</a>
+					<a href="" class="search-result__item">
+						<div class="search-result__image"><img src="img/catalog/catalog_img_12.png?_v=1636745419843" alt=""></div>
+						<div class="search-result__content">
+							<div class="search-result__name">Костюм муж утепленный Фотон (куртка и полукомбинезон )</div>
+							<div class="search-result__prices">
+								<div class="search-result__price">19780 руб.</div>
+							</div>
+						</div>
+					</a>
+					<a href="" class="search-result__item">
+						<div class="search-result__image"><img src="img/catalog/catalog_img_1.png?_v=1636745419843" alt=""></div>
+						<div class="search-result__content">
+							<div class="search-result__name">Костюм утепленный "Спектр" с полукомбинезоном</div>
+							<div class="search-result__prices">
+								<div class="search-result__price">4 580 руб.</div>
+								<div class="search-result__price-old">2 800 руб.</div>
+							</div>
+						</div>
+					</a>
+					<a href="" class="search-result__item">
+						<div class="search-result__image"><img src="img/catalog/catalog_img_2.png?_v=1636745419843" alt=""></div>
+						<div class="search-result__content">
+							<div class="search-result__name">Костюм муж утепленный Асгард (куртка и брюки)</div>
+							<div class="search-result__prices">
+								<div class="search-result__price">18000 руб.</div>
+								<div class="search-result__price-old">19080 руб.</div>
+							</div>
+						</div>
+					</a>
+					<a href="" class="search-result__item">
+						<div class="search-result__image"><img src="img/catalog/catalog_img_11.png?_v=1636745419843" alt=""></div>
+						<div class="search-result__content">
+							<div class="search-result__name">Костюм утепленный "Спектр" с полукомбинезоном</div>
+							<div class="search-result__prices">
+								<div class="search-result__price">19780 руб.</div>
+							</div>
+						</div>
+					</a>
+					<a href="" class="search-result__item">
+						<div class="search-result__image"><img src="img/catalog/catalog_img_12.png?_v=1636745419843" alt=""></div>
+						<div class="search-result__content">
+							<div class="search-result__name">Костюм муж утепленный Фотон (куртка и полукомбинезон )</div>
+							<div class="search-result__prices">
+								<div class="search-result__price">19780 руб.</div>
+							</div>
+						</div>
+					</a>
+					<a href="" class="search-result__item">
+						<div class="search-result__image"><img src="img/catalog/catalog_img_1.png?_v=1636745419843" alt=""></div>
+						<div class="search-result__content">
+							<div class="search-result__name">Костюм утепленный "Спектр" с полукомбинезоном</div>
+							<div class="search-result__prices">
+								<div class="search-result__price">4 580 руб.</div>
+								<div class="search-result__price-old">2 800 руб.</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<button type="submit" class="form__button green-btn">Показать все</button>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="popup popup_consent">
+	<div class="popup__content">
+		<div class="popup__body">
+			<div class="popup__top">
+				<div class="popup__title">Cогласие на обработку персональных данных</div>
+				<div class="popup__close"></div>
+			</div>
+			<div class="popup__center">
+				<div class="popup__text">Согласие посетителя сайта http://www.terminal3.ru на обработку персональных данных
+				</div>
+				<div class="popup__text">Настоящим свободно, своей волей и в своем интересе даю согласие ООО «Терминал-3», которое находится по адресу: http://www.terminal3.ru , на автоматизированную и неавтоматизированную обработку моих персональных данных, в том числе с использованием интернет - сервисов на сайте http://www.terminal3.ru в соответствии со следующим перечнем:
+					<ul class="popup__list">
+						<li class="popup__item">персональные данные – номер телефона, адрес моей электронной почты, фамилия, имя, отчество;</li>
+						<li class="popup__item">источник захода на сайт http://www.terminal3.ru  и информация поискового или рекламного запроса;</li>
+						<li class="popup__item">данные о пользовательском устройстве (среди которых разрешение, версия и другие атрибуты, характеризующие пользовательское устройство);</li>
+						<li class="popup__item">пользовательские клики, просмотры страниц, заполнения полей, показы и просмотры баннеров и видео;</li>
+						<li class="popup__item">данные, характеризующие аудиторные сегменты;</li>
+						<li class="popup__item">номер телефона, адрес моей электронной почты, фамилия, имя, отчество; параметры сессии;</li>
+						<li class="popup__item">данные о времени посещения;</li>
+						<li class="popup__item">идентификатор пользователя, хранимый в cookie,</li>
+					</ul>
+				</div>
+				<div class="popup__text">для целей повышения осведомленности посетителей Сайта http://www.terminal3.ru о продуктах и услугах ООО «Терминал-3», предоставления релевантной рекламной информации и оптимизации рекламы, исполнения договорных обязательств, проведение рекламных кампаний и маркетинговых исследований.</div>
+				<div class="popup__text">Также даю свое согласие на предоставление ООО «Терминал-3» моих персональных данных как посетителя Сайта http://www.terminal3.ru, с которыми сотрудничает ООО «Терминал-3».  ООО «Терминал-3» вправе осуществлять обработку моих персональных данных следующими способами: сбор, запись, систематизация, накопление, хранение, обновление, изменение, использование, передача (распространение, предоставление, доступ).</div>
+				<div class="popup__text">Настоящее согласие вступает в силу с момента моего перехода на Сайт http://www.terminal3.ru и действует в течение сроков, установленных действующим законодательством РФ.</div>
+				<div class="popup__text">Основанием для обработки персональных данных являются: Ст. 24 Конституции Российской Федерации; ст.6 Федерального закона №152-ФЗ «О персональных данных».</div>
+				<div class="popup__text">Персональные данные обрабатываются до окончания обработки. Так же обработка персональных данных может быть прекращена по запросу субъекта персональных данных.</div>
+				<div class="popup__text">Хранение персональных данных, зафиксированных на бумажных носителях осуществляется согласно Федеральному закону №125-ФЗ «Об архивном деле в Российской Федерации» и иным нормативно правовым актам в области архивного дела и архивного хранения. Срок или условие прекращения обработки персональных данных: прекращение деятельности ООО «Терминал-3».</div>
+			</div>
+			<div class="popup__btns">
+				<a href="" class="form__button">Принимаю</a>
+				<a href="" class="form__button">Не принимаю</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup_policy">
+	<div class="popup__content">
+		<div class="popup__body">
+			<div class="popup__top">
+				<div class="popup__title">Политика конфиденциальности</div>
+				<div class="popup__close"></div>
+			</div>
+			<div class="popup__center">
+				<div class="popup__text">Мы стремимся уважать информацию личного характера, касающуюся посетителей нашего сайта. В настоящей Политике конфиденциальности разъясняются некоторые из мер, которые мы предпринимаем для защиты Вашей частной жизни.</div>
+				<div class="popup__subtitle">Конфиденциальность информации личного характера</div>
+				<div class="popup__text">"Информация личного характера" обозначает любую информацию, которая может быть использована для идентификации личности, например, фамилия или адрес электронной почты.</div>
+				<div class="popup__subtitle">Использование информации частного характера</div>
+				<div class="popup__text">Информация личного характера, полученная через наш сайт, используется нами, среди прочего, для целей регистрирования пользователей, для поддержки работы и совершенствования нашего сайта, отслеживания политики и статистики пользования сайтом, а также в целях, разрешенных вами.</div>
+				<div class="popup__subtitle">Раскрытие информации частного характера</div>
+				<div class="popup__text">Мы нанимаем другие компании или связаны с компаниями, которые по нашему поручению предоставляют услуги, такие как обработка и доставка информации, размещение информации на данном сайте, доставка содержания и услуг, предоставляемых настоящим сайтом, выполнение статистического анализа. Чтобы эти компании могли предоставлять эти услуги, мы можем сообщать им информацию личного характера, однако им будет разрешено получать только ту информацию личного характера, которая необходима им для предоставления услуг. Они обязаны соблюдать конфиденциальность этой информации, и им запрещено использовать ее в иных целях.</div>
+				<div class="popup__text">Мы можем использовать или раскрывать Ваши личные данные и по иным причинам, в том числе, если мы считаем, что это необходимо в целях выполнения требований закона или решений суда, для защиты наших прав или собственности, защиты личной безопасности пользователей нашего сайта или представителей широкой общественности, в целях расследования или принятия мер в отношении незаконной или предполагаемой незаконной деятельности, в связи с корпоративными сделками, такими как разукрупнение, слияние, консолидация, продажа активов или в маловероятном случае банкротства, или в иных целях в соответствии с Вашим согласием.</div>
+				<div class="popup__subtitle"></div>
+				<div class="popup__text">Мы можем использовать или раскрывать Ваши личные данные и по иным причинам, в том числе, если мы считаем, что это необходимо в целях выполнения требований закона или решений суда, для защиты наших прав или собственности, защиты личной безопасности пользователей нашего сайта или представителей широкой общественности, в целях расследования или принятия мер в отношении незаконной или предполагаемой незаконной деятельности, в связи с корпоративными сделками, такими как разукрупнение, слияние, консолидация, продажа активов или в маловероятном случае банкротства, или в иных целях в соответствии с Вашим согласием.</div>
+				<div class="popup__subtitle">Доступ к информации личного характера</div>
+				<div class="popup__text">Если после предоставления информации на данный сайт, Вы решите, что Вы не хотите, чтобы Ваша персональная информация использовалась в каких-либо целях, связавшись с нами по следующему адресу: zlk@terminal3.ru.</div>
+				<div class="popup__subtitle">Наша практика в отношении информации неличного характера</div>
+				<div class="popup__text">Мы можем собирать информацию неличного характера о Вашем посещении сайта, в том числе просматриваемые вами страницы, выбираемые вами ссылки, а также другие действия в связи с Вашим использованием нашего сайта. Кроме того, мы можем собирать определенную стандартную информацию, которую Ваш браузер направляет на любой посещаемый вами сайт, такую как Ваш IP-адрес, тип браузера и язык, время, проведенное на сайте, и адрес соответствующего веб-сайта.</div>
+				<div class="popup__subtitle">Использование закладок (cookies)</div>
+				<div class="popup__text">Файл cookie - это небольшой текстовый файл, размещаемый на Вашем твердом диске нашим сервером. Cookies содержат информацию, которая позже может быть нами прочитана. Никакие данные, собранные нами таким путем, не могут быть использованы для идентификации посетителя сайта. Не могут cookies использоваться и для запуска программ или для заражения Вашего компьютера вирусами. Мы используем cookies в целях контроля использования нашего сайта, сбора информации неличного характера о наших пользователях, сохранения Ваших предпочтений и другой информации на Вашем компьютере с тем, чтобы сэкономить Ваше время за счет снятия необходимости многократно вводить одну и ту же информацию, а также в целях отображения Вашего персонализированного содержания в ходе Ваших последующих посещений нашего сайта. Эта информация также используется для статистических исследований, направленных на корректировку содержания в соответствии с предпочтениями пользователей.</div>
+				<div class="popup__subtitle">Агрегированная информация</div>
+				<div class="popup__text">Мы можем объединять в неидентифицируемом формате предоставляемую вами личную информацию и личную информацию, предоставляемую другими пользователями, создавая таким образом агрегированные данные. Мы планируем анализировать данные агрегированного характера в основном в целях отслеживания групповых тенденций. Мы не увязываем агрегированные данные о пользователях с информацией личного характера, поэтому агрегированные данные не могут использоваться для установления связи с вами или Вашей идентификации. Вместо фактических имен в процессе создания агрегированных данных и анализа мы будем использовать имена пользователей. В статистических целях и в целях отслеживания групповых тенденций анонимные агрегированные данные могут предоставляться другим компаниям, с которыми мы взаимодействуем.</div>
+				<div class="popup__subtitle">Изменения, вносимые в настоящее Заявление о конфиденциальности</div>
+				<div class="popup__text">Мы сохраняем за собой право время от времени вносить изменения или дополнения в настоящую Политику конфиденциальности - частично или полностью. Мы призываем Вас периодически перечитывать нашу Политику конфиденциальности с тем, чтобы быть информированными относительно того, как мы защищаем Вашу личную информацию. С последним вариантом Политики конфиденциальности можно ознакомиться путем нажатия на гипертекстовую ссылку "Политика конфиденциальности", находящуюся в нижней части домашней страницы данного сайта. Во многих случаях, при внесении изменений в Политику конфиденциальности, мы также изменяем и дату, проставленную в начале текста Политики конфиденциальности, однако других уведомлений об изменениях мы можем вам не направлять. Однако, если речь идет о существенных изменениях, мы уведомим Вас, либо разместив предварительное заметное объявление о таких изменениях, либо непосредственно направив вам уведомление по электронной почте. Продолжение использования вами данного сайта и выход на него означает Ваше согласие с такими изменениями.</div>
+				<div class="popup__text">Связь с нами. Если у Вас возникли какие-либо вопросы или предложения по поводу нашего положения о конфиденциальности, пожалуйста, свяжитесь с нами по следующему адресу: zlk@terminal3.ru.</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<!-- Swiper -->
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="js/vendors.min.js?_v=20211113023019"></script>
+<script src="js/app.min.js?_v=20211113023019"></script>
+</body>
+
+</html>
