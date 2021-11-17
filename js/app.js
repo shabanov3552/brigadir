@@ -1109,6 +1109,35 @@ DynamicAdapt.prototype.arraySort = function (arr) {
 
 const da = new DynamicAdapt("max");
 da.init();
+/* if (document.querySelector('.main-slider__humans')) {
+	new Swiper('.main-slider__humans', {
+		slidesPerView: 3,
+		spaceBetween: 118,
+		loop: true,
+		slideToClickedSlide: true,
+		speed: 800,
+		navigation: {
+			nextEl: ".main-slider__nav-next",
+			prevEl: ".main-slider__nav-prev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+			},
+			1270: {
+				slidesPerView: 3,
+			},
+		},
+		thumbs: {
+			swiper: {
+				el: '.main-slider__background',
+				loop: true,
+				effect: "fade",
+			},
+		},
+	});
+} */
+
 
 if (document.querySelector('.popular__slider')) {
 	new Swiper('.popular__slider', {
