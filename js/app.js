@@ -341,7 +341,17 @@ for (let index = 0; index < popups.length; index++) {
 		}
 	});
 }
+function focus_input(item) {
+	let form__input = document.querySelector('.popup_' + item + ' input');
+	if (form__input) {
+
+		setTimeout(() => {
+			form__input.focus()
+		}, 550);
+	}
+}
 function popup_open(item, video = '') {
+	focus_input(item)
 	let activePopup = document.querySelectorAll('.popup._active');
 	if (activePopup.length > 0) {
 		popup_close('', false);
