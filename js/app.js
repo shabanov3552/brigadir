@@ -351,6 +351,7 @@ function focus_input(item) {
 	}
 }
 function popup_open(item, video = '') {
+	console.log(item);
 	focus_input(item)
 	let activePopup = document.querySelectorAll('.popup._active');
 	if (activePopup.length > 0) {
@@ -1172,7 +1173,7 @@ if (document.querySelector('.popular__slider')) {
 				slidesPerView: 5,
 			},
 		},
-		speed: 800,
+		speed: 200,
 		observer: true,
 		observeParents: true,
 		slidesPerView: 5,
@@ -1207,7 +1208,7 @@ if (document.querySelector('.popular__slider2')) {
 				slidesPerView: 5,
 			},
 		},
-		speed: 800,
+		speed: 200,
 		observer: true,
 		observeParents: true,
 		slidesPerView: 5,
@@ -1242,7 +1243,7 @@ if (document.querySelector('.popular__slider3')) {
 				slidesPerView: 5,
 			},
 		},
-		speed: 800,
+		speed: 200,
 		observer: true,
 		observeParents: true,
 		slidesPerView: 5,
@@ -1272,7 +1273,7 @@ if (document.querySelector('.index-works__slider')) {
 				slidesPerView: 3,
 			},
 		},
-		speed: 800,
+		speed: 200,
 		observer: true,
 		observeParents: true,
 		slidesPerView: 3,
