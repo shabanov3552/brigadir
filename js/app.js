@@ -1316,7 +1316,7 @@ if (document.querySelector('.slider-product__big')) {
 
 function mapAdd() {
 	let tag = document.createElement('script');
-	tag.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDf4p3LffKDVRZJBYNqvV2DGVNVQwA1Mm4&callback=mapInit";
+	tag.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDRbDsoWrjdRSa6q1BVfhtINf-EzfseCiU&callback=mapInit";
 	let firstScriptTag = document.getElementsByTagName('script')[0];
 	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 }
