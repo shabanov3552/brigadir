@@ -351,7 +351,6 @@ function focus_input(item) {
 	}
 }
 function popup_open(item, video = '') {
-	console.log(item);
 	focus_input(item)
 	let activePopup = document.querySelectorAll('.popup._active');
 	if (activePopup.length > 0) {
@@ -599,159 +598,6 @@ function initRatings() {
 }
 //#endregion
 
-//#region Forms
-
-//let btn = document.querySelectorAll('button[type="submit"],input[type="submit"]');
-let forms = document.querySelectorAll('form');
-if (forms.length > 0) {
-	for (let index = 0; index < forms.length; index++) {
-		const el = forms[index];
-		el.addEventListener('submit', form_submit);
-	}
-}
-
-async function form_submit(e) {
-	let btn = e.target;
-	let form = btn.closest('form');
-	let error = form_validate(form);
-	if (error == 0) {
-		let formAction = form.getAttribute('action') ? form.getAttribute('action').trim() : '#';
-		let formMethod = form.getAttribute('method') ? form.getAttribute('method').trim() : 'GET';
-		const message = form.getAttribute('data-message');
-		const ajax = form.getAttribute('data-ajax');
-
-		//SendForm
-		if (ajax) {
-			e.preventDefault();
-			let formData = new FormData(form);
-			form.classList.add('_sending');
-			let response = await fetch(formAction, {
-				method: formMethod,
-				body: formData
-			});
-			if (response.ok) {
-				let result = await response.json();
-				form.classList.remove('_sending');
-				if (message) {
-					popup_open(message + '-message');
-				}
-				form_clean(form);
-			} else {
-				alert("Ошибка");
-				form.classList.remove('_sending');
-			}
-		}
-		// If test
-		if (form.hasAttribute('data-test')) {
-			e.preventDefault();
-			if (message) {
-				popup_open(message + '-message');
-			}
-			form_clean(form);
-		}
-	} else {
-		let form_error = form.querySelectorAll('._error');
-		if (form_error && form.classList.contains('_goto-error')) {
-			_goto(form_error[0], 1000, 50);
-		}
-		e.preventDefault();
-	}
-}
-
-function form_validate(form) {
-	let error = 0;
-	let form_req = form.querySelectorAll('.js_req');
-	if (form_req.length > 0) {
-		for (let index = 0; index < form_req.length; index++) {
-			const el = form_req[index];
-			if (!_is_hidden(el)) {
-				error += form_validate_input(el);
-			}
-		}
-	}
-	return error;
-}
-
-function form_validate_input(input) {
-	let error = 0;
-	let input_g_value = input.getAttribute('data-value');
-
-	if (input.getAttribute("name") == "email" || input.classList.contains("_email")) {
-		if (input.value != input_g_value) {
-			let em = input.value.replace(" ", "");
-			input.value = em;
-		}
-		if (email_test(input) || input.value == input_g_value) {
-			form_add_error(input);
-			error++;
-		} else {
-			form_remove_error(input);
-		}
-	} else if (input.getAttribute("type") == "checkbox" && input.checked == false) {
-		form_add_error(input);
-		error++;
-	} else {
-		if (input.value == '' || input.value == input_g_value) {
-			form_add_error(input);
-			error++;
-		} else {
-			form_remove_error(input);
-		}
-	}
-	return error;
-}
-
-function form_add_error(input) {
-	input.classList.add('_error');
-	input.parentElement.classList.add('_error');
-
-	let input_error = input.parentElement.querySelector('.form__error');
-	if (input_error) {
-		input.parentElement.removeChild(input_error);
-	}
-	let input_error_text = input.getAttribute('data-error');
-	if (input_error_text && input_error_text != '') {
-		input.parentElement.insertAdjacentHTML('beforeend', '<div class="form__error">' + input_error_text + '</div>');
-	}
-}
-
-function form_remove_error(input) {
-	input.classList.remove('_error');
-	input.parentElement.classList.remove('_error');
-
-	let input_error = input.parentElement.querySelector('.form__error');
-	if (input_error) {
-		input.parentElement.removeChild(input_error);
-	}
-}
-
-function form_clean(form) {
-	let inputs = form.querySelectorAll('input,textarea');
-	for (let index = 0; index < inputs.length; index++) {
-		const el = inputs[index];
-		el.parentElement.classList.remove('_focus');
-		el.classList.remove('_focus');
-		el.value = el.getAttribute('data-value');
-	}
-	let checkboxes = form.querySelectorAll('.checkbox__input');
-	if (checkboxes.length > 0) {
-		for (let index = 0; index < checkboxes.length; index++) {
-			const checkbox = checkboxes[index];
-			checkbox.checked = false;
-		}
-	}
-	let selects = form.querySelectorAll('select');
-	if (selects.length > 0) {
-		for (let index = 0; index < selects.length; index++) {
-			const select = selects[index];
-			const select_default_value = select.getAttribute('data-default');
-			select.value = select_default_value;
-			select_item(select);
-		}
-	}
-}
-
-//#endregion
 
 //#region viewPass
 let viewPass = document.querySelectorAll('._viewpass');
@@ -811,9 +657,14 @@ function inputs_init(inputs) {
 					//'+38(999) 999 9999'
 					//'+375(99)999-99-99'
 					input.classList.add('_mask');
-					Inputmask("+7(999) 999 9999", {
+					Inputmask('+7(x99) 999 9999', {
 						clearIncomplete: true,
 						clearMaskOnLostFocus: true,
+						definitions: {
+							x: {
+								validator: '[0-79-9]'
+							}
+						},
 						onincomplete: function () {
 							input_clear_mask(input);
 						}
@@ -895,6 +746,7 @@ function input_focus_remove(input) {
 	input.parentElement.classList.remove('_focus');
 }
 function input_clear_mask(input, input_g_value) {
+	console.log('qwe');
 	input.inputmask.remove();
 	input_focus_remove(input);
 }
@@ -1316,7 +1168,7 @@ if (document.querySelector('.slider-product__big')) {
 
 function mapAdd() {
 	let tag = document.createElement('script');
-	tag.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDRbDsoWrjdRSa6q1BVfhtINf-EzfseCiU&callback=mapInit";
+	tag.src = "https://maps.googleapis.com/maps/api/js?key=&callback=mapInit";
 	let firstScriptTag = document.getElementsByTagName('script')[0];
 	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 }
@@ -1713,6 +1565,12 @@ btn_more.forEach(element => {
 		}
 	});
 });
+
+//#endregion
+
+//#region parslye init
+
+$('.form').parsley();
 
 //#endregion
 

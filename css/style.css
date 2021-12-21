@@ -295,6 +295,22 @@ textarea {
   resize: vertical;
 }
 
+.parsley-error {
+  border: 2px solid #cb2424;
+}
+
+.checkbox.parsley-error {
+  border: none;
+}
+
+.checkbox.parsley-error .checkbox__text:before {
+  border: 2px solid #cb2424;
+}
+
+.checkbox.parsley-error + .parsley-errors-list {
+  display: none;
+}
+
 .checkbox {
   position: relative;
 }
@@ -1288,6 +1304,12 @@ textarea {
 .video-block__video {
   width: 100%;
   height: 100%;
+}
+
+.parsley-required,
+.parsley-type {
+  color: #db5959;
+  margin: 5px 0px 0px 0px;
 }
 
 .js_ibg {
@@ -6752,8 +6774,24 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .del__map {
-  height: 440px;
   margin: 0px 0px 0px 370px;
+}
+
+.del__map .del__map-wrapper {
+  height: 440px;
+}
+
+.del__map .del__link {
+  margin: 0px 0px 20px 0px;
+}
+
+.del__map .del__link::before {
+  content: "Открыть карту";
+  color: #fff;
+}
+
+.del__map .del__link._active::before {
+  content: "Скрыть карту";
 }
 
 .faq {
