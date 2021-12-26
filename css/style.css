@@ -10154,7 +10154,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   }
 
   .compare {
-    padding: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 20px;
   }
 
   .compare__btns {
