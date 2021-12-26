@@ -10153,6 +10153,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
             flex: 1 1 calc(100% - 2rem);
   }
 
+  .compare {
+    padding: 0px 0px 0px 0px;
+  }
+
   .compare__btns {
     padding-right: 20px;
   }
