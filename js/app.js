@@ -1535,6 +1535,7 @@ document.addEventListener("click", function (e) {
 
 tippy(document.querySelectorAll('.tippy'), {
 	placement: 'top',
+	maxWidth: 260,
 });
 
 //#endregion
