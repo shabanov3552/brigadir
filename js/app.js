@@ -322,6 +322,9 @@ for (let index = 0; index < popup_link.length; index++) {
 		if (el.closest('.menu-mobile')) {
 			return
 		}
+		if (el.closest('[href="#callback"]')) {
+			return
+		}
 		if (el.classList.contains('menu-lt__category') && el.nextElementSibling.closest('._active')) {
 			popup_close()
 		}
@@ -1524,8 +1527,11 @@ document.addEventListener("click", function (e) {
 	if (e.target.closest('textarea')) {
 		txtarAutoHeight(e.target)
 	}
-	if (e.target.closest('.js_video-control')) {
+	/* if (e.target.closest('.js_video-control')) {
 		aboutPlayVideo()
+	} */
+	if (e.target.closest('[href="#callback"]')) {
+		popup_open('callback')
 	}
 });
 
@@ -1542,7 +1548,7 @@ tippy(document.querySelectorAll('.tippy'), {
 
 //#region about-video-play
 
-function aboutPlayVideo() {
+/* function aboutPlayVideo() {
 	let videoContainer = document.querySelector('.js_video-block');
 	let video = document.querySelector('.js_video');
 	if (video.getAttribute('src') === '') {
@@ -1563,7 +1569,7 @@ function aboutPlayVideo() {
 		video.load();
 
 	});
-}
+} */
 
 //#endregion
 
@@ -1608,14 +1614,7 @@ if (document.querySelectorAll('.order__more-btn').length > 0) {
 
 //#endregion
 
-
-// !!убрать перед передачей на бэк
-document.querySelectorAll('.compare__btn-param').forEach((n, i, a) => {
-	n.addEventListener('click', () => a.forEach(m => {
-		m.classList.toggle('_active', m === n)
-	}));
-});
-
+//#region функционал двойного скролла
 
 (function ($) {
 
@@ -1745,4 +1744,14 @@ document.querySelectorAll('.compare__btn-param').forEach((n, i, a) => {
 
 $(document).ready(function () {
 	$('.double-scroll').doubleScroll();
+});
+
+//#endregion
+
+
+// !!убрать перед передачей на бэк
+document.querySelectorAll('.compare__btn-param').forEach((n, i, a) => {
+	n.addEventListener('click', () => a.forEach(m => {
+		m.classList.toggle('_active', m === n)
+	}));
 });
