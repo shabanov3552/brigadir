@@ -157,6 +157,11 @@ table {
   border: 0px solid transparent;
 }
 
+body::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
 body {
   color: #fff;
 }
@@ -4573,8 +4578,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .footer__col:last-child {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 230px;
-          flex: 0 0 230px;
+      -ms-flex: 0 0 233px;
+          flex: 0 0 233px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -5589,6 +5594,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   cursor: pointer;
 }
 
+.product__desc-more-btn::after {
+  content: "Раскрыть все описание";
+}
+
+.product__desc-more-btn._active::after {
+  content: "Свернуть описание";
+}
+
 .product__desc-more-block {
   margin: 10px 0px 0px 0px;
 }
@@ -5621,6 +5634,17 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   width: 100%;
   color: #000;
   background-color: #fff;
+  max-height: 240px;
+  overflow: auto;
+}
+
+.product__sizes-select .nice-select .list::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+
+.product__sizes-select .nice-select .list::-webkit-scrollbar-thumb {
+  border-radius: 30px;
 }
 
 .product__sizes-select .nice-select .option.selected.focus,
