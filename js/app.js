@@ -73,6 +73,7 @@ function body_lock(delay) {
 }
 function body_lock_remove(delay) {
 	let body = document.querySelector("body");
+	let rightMenu = document.querySelector(".menu-rt");
 	if (unlock) {
 		let lock_padding = document.querySelectorAll("._lp");
 		setTimeout(() => {
@@ -81,6 +82,7 @@ function body_lock_remove(delay) {
 				el.style.paddingRight = '0px';
 			}
 			body.style.paddingRight = '0px';
+			rightMenu.style.paddingRight = '0px';
 			body.classList.remove("_lock");
 		}, delay);
 		unlock = false;
@@ -91,13 +93,16 @@ function body_lock_remove(delay) {
 }
 function body_lock_add(delay) {
 	let body = document.querySelector("body");
+	let rightMenu = document.querySelector(".menu-rt");
+	let pr = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
 	if (unlock) {
 		let lock_padding = document.querySelectorAll("._lp");
 		for (let index = 0; index < lock_padding.length; index++) {
 			const el = lock_padding[index];
 			el.style.paddingRight = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
 		}
-		body.style.paddingRight = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+		body.style.paddingRight = pr;
+		rightMenu.style.paddingRight = pr;
 		body.classList.add("_lock");
 		unlock = false;
 		setTimeout(function () {
@@ -600,6 +605,8 @@ function initRatings() {
 	}
 }
 //#endregion
+
+
 
 
 //#region viewPass
