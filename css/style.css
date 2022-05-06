@@ -5988,6 +5988,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  -webkit-transition: margin-bottom 0.3s ease 0s;
+  -o-transition: margin-bottom 0.3s ease 0s;
+  transition: margin-bottom 0.3s ease 0s;
 }
 
 .personal-data__row._active {
@@ -6011,6 +6015,36 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
   width: auto;
+}
+
+.personal-data__row.show-msg {
+  margin-bottom: 30px;
+}
+
+.personal-data__row.show-msg .personal-data__row-msg {
+  visibility: visible;
+  opacity: 1;
+}
+
+.personal-data__row-msg {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .personal-data__name {

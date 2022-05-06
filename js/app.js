@@ -634,7 +634,6 @@ function inputs_init(inputs) {
 			const input = inputs[index];
 			const input_g_value = input.getAttribute('data-value');
 			input_placeholder_add(input);
-			const clear_input = input.nextElementSibling.nextElementSibling;
 			if (input.value != '' && input.value != input_g_value) {
 				input_focus_add(input);
 			}
@@ -693,9 +692,11 @@ function inputs_init(inputs) {
 				}
 				/* form_remove_error(input); */
 			});
-			clear_input.addEventListener('click', function (e) {
-				input.value = '';
-				input_focus_remove(input)
+			document.addEventListener('click', function (e) {
+				if (e.target.closest('.form__input-clear')) {
+					input.value = '';
+					input_focus_remove(input)
+				}
 
 			});
 			input.addEventListener('blur', function (e) {
@@ -745,6 +746,9 @@ function input_placeholder_add(input) {
 	if (input.value == '' && input_g_value == '') {
 		input.insertAdjacentHTML('afterend', '<span class="form__input-clear"><img src="img/svg/icon_clear.svg" alt=""></span>');
 		input.insertAdjacentHTML('afterend', '<span class="form__input-placeholder"></span>');
+	}
+	if (input.value.length > 0) {
+		input.insertAdjacentHTML('afterend', '<span class="form__input-clear"><img src="img/svg/icon_clear.svg" alt=""></span>');
 	}
 }
 function input_focus_add(input) {
@@ -1515,10 +1519,18 @@ function changeData(target) {
 	let submitBtn = el.querySelector('.personal-data__btn')
 	submitBtn.addEventListener("click", function (e) {
 		el.classList.remove('_active');
+		el.classList.add('show-msg');
+		setTimeout(() => {
+			el.classList.remove('show-msg');
+		}, 3000);
 	});
 	document.addEventListener('keydown', function (e) {
 		if (e.code === 'Escape' || e.code === 'Enter' || e.code === 'NumpadEnter') {
 			el.classList.remove('_active');
+			el.classList.add('show-msg');
+			setTimeout(() => {
+				el.classList.remove('show-msg')
+			}, 3000);
 		}
 	});
 }
@@ -1608,7 +1620,6 @@ $('.form').parsley();
 //#region смена текста кнопки
 
 if (document.querySelectorAll('.order__more-btn').length > 0) {
-	console.log('qwe');
 	let more_btn = document.querySelectorAll('.order__more-btn');
 	for (let btn = 0; btn < more_btn.length; btn++) {
 		const element = more_btn[btn];
