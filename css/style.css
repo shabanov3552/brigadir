@@ -6042,9 +6042,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
           justify-content: flex-end;
   visibility: hidden;
   opacity: 0;
+  color: #43b627;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.personal-data__row-msg.err {
+  color: #db5959;
 }
 
 .personal-data__name {
