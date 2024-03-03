@@ -1261,8 +1261,8 @@ if (document.querySelector('.main-slider__slider')) {
 		},
 	});
 }
-if (document.querySelector('.popular__slider')) {
-	new Swiper('.popular__slider', {
+if (document.querySelector('.popular__slider1')) {
+	new Swiper('.popular__slider1', {
 		/* autoplay: {
 			delay: 3000,
 			disableOnInteraction: false,
@@ -1347,7 +1347,7 @@ if (document.querySelector('.popular-new-slider .popular__slider')) {
 
 	let popNewSlider = new Swiper('.popular-new-slider .popular__slider', {
 		autoplay: {
-			delay: 1000,
+			delay: 3000,
 			disableOnInteraction: false,
 		},
 		breakpoints: {
@@ -1393,6 +1393,7 @@ if (document.querySelector('.popular-new-slider .popular__slider')) {
 					slidesPerView: 4,
 					loop: true,
 					spaceBetween: 57,
+					simulateTouch: false,
 					breakpoints: {
 						320: {
 							slidesPerView: 1,
